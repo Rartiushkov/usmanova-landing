@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Метод Усмановой — выбрать формат</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="method-page">
+  <main>
+    <section class="pricing-hero" id="form">
+      <button class="plain-link" data-go="home" type="button">На главную</button>
+      <p class="note">Для корректной работы сайта отключите VPN</p>
+      <h1>Выберите формат<br><span>и начните сегодня</span></h1>
+      <p>Чем раньше старт, тем больше успеете до конца лета.</p>
+      <div class="timer" aria-label="Таймер до повышения цены">
+        <span data-hours>06</span> часов :
+        <span data-minutes>34</span> минуты :
+        <span data-seconds>00</span> секунд
+      </div>
+    </section>
+
+    <section class="tariffs">
+      <article class="tariff-card">
+        <h2>Лёгкий старт</h2>
+        <div class="price-row">
+          <strong>3 140 ₽</strong>
+          <span>6 400 ₽</span>
+        </div>
+        <p>Доступ: 2 месяца</p>
+        <ul>
+          <li>20 тренировок</li>
+          <li>Питание по неделям</li>
+          <li>Растяжка и восстановление</li>
+        </ul>
+        <button class="button" data-tariff="Лёгкий старт">Забрать набор</button>
+      </article>
+
+      <article class="tariff-card tariff-card--accent">
+        <p class="tag">Выбор большинства</p>
+        <h2>Преображение</h2>
+        <div class="price-row">
+          <strong>5 490 ₽</strong>
+          <span>22 380 ₽</span>
+        </div>
+        <p>Доступ: 3 месяца</p>
+        <ul>
+          <li>Всё из лёгкого старта</li>
+          <li>5 лекций по питанию</li>
+          <li>Дополнительные материалы</li>
+        </ul>
+        <button class="button" data-tariff="Преображение">Забрать набор</button>
+      </article>
+
+      <article class="tariff-card">
+        <p class="tag">Максимальный результат</p>
+        <h2>Максимум</h2>
+        <div class="price-row">
+          <strong>6 890 ₽</strong>
+          <span>37 280 ₽</span>
+        </div>
+        <p>Доступ: 6 месяцев</p>
+        <ul>
+          <li>Расширенный набор тренировок</li>
+          <li>Питание и поддержка</li>
+          <li>Материалы для самостоятельной работы</li>
+        </ul>
+        <button class="button" data-tariff="Максимум">Забрать набор</button>
+      </article>
+    </section>
+
+    <section class="form-card order-card">
+      <h2>Оставьте контакты для доступа</h2>
+      <form class="lead-form" data-form="method">
+        <label>
+          <span>Выбранный тариф</span>
+          <input type="text" name="tariff" value="Лёгкий старт" readonly>
+        </label>
+        <label>
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите ваше имя" required>
+        </label>
+        <label>
+          <span>Эл. адрес</span>
+          <input type="email" name="email" placeholder="Введите ваш эл. адрес" required>
+        </label>
+        <label>
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="Введите ваш телефон" required>
+        </label>
+        <button class="button" type="submit">Продолжить</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="cookie" data-cookie>
+    <p>Мы используем cookie-файлы. Это нужно для лучшей работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</p>
+    <button class="button button--tiny" data-cookie-ok>OK</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

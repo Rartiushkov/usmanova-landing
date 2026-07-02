@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация амбассадора</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="simple-page">
+  <main class="signup-screen">
+    <section class="signup-copy">
+      <button class="plain-link" data-go="home" type="button">На главную</button>
+      <h1>Условия программы для амбассадоров</h1>
+      <p>Краткое описание программы: преимущества, правила участия и промокод для старта.</p>
+      <div class="terms-card">
+        <h2>Оферта</h2>
+        <p>После регистрации партнёрский код придёт на почту. Заполните форму теми контактами, которыми будете пользоваться дальше.</p>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <h2>Зарегистрируйтесь, чтобы получить промокод амбассадора</h2>
+      <form class="lead-form" data-form="ambassador">
+        <label>
+          <span>Эл. адрес</span>
+          <input type="email" name="email" placeholder="Введите ваш эл. адрес" required>
+        </label>
+        <label>
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите ваше имя" required>
+        </label>
+        <label>
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="Введите ваш телефон" required>
+        </label>
+        <input type="hidden" name="tgid">
+        <input type="hidden" name="ambassid">
+        <button class="button" type="submit">Получить промокод</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="cookie" data-cookie>
+    <p>Мы используем cookie-файлы. Это нужно для лучшей работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</p>
+    <button class="button button--tiny" data-cookie-ok>OK</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

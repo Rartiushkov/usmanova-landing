@@ -1,719 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Авторские фитнес-программы чемпионки: похудеть, подтянуть попу и живот, набрать форму в зале, восстановиться после родов. Без диет."/>
-  <title>Фитнес с Катей Усмановой — похудение, фигура, зал, форма после родов</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <style>
-    @font-face {
-      font-family: 'Gilroy';
-      src: url('https://usmanovafit.gymteam.ru/fileservice/file/download/h/c5ad85b5bf16600a49d40ad5ed235e33.woff/a/934144/sc/228') format('woff');
-      font-weight: 400; font-style: normal;
-    }
-    @font-face {
-      font-family: 'Gilroy';
-      src: url('https://usmanovafit.gymteam.ru/fileservice/file/download/h/6e5d6a1c28b12636f6043ff99fc0ce86.woff/a/934144/sc/205') format('woff');
-      font-weight: 500; font-style: normal;
-    }
-    @font-face {
-      font-family: 'Gilroy';
-      src: url('https://usmanovafit.gymteam.ru/fileservice/file/download/h/a0b69f25a8d7f98144131ebbd1a90d1e.woff/a/934144/sc/234') format('woff');
-      font-weight: 600; font-style: normal;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Gilroy', 'Inter', Roboto, sans-serif;
-      font-weight: 400;
-      background: #fff;
-      color: #000;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; transition: all 0.3s; }
-    a:hover { text-decoration: none; }
-    button { cursor: pointer; border: none; background: none; font-family: inherit; }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-
-    /* ── HERO ── */
-    .hero {
-      background: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 0;
-      overflow: hidden;
-    }
-    .hero__inner {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .hero__content { flex: 1; padding: 60px 40px 60px 60px; max-width: 560px; }
-    .hero__title {
-      font-size: clamp(26px, 3.5vw, 48px);
-      font-weight: 600;
-      line-height: 1.15;
-      text-transform: uppercase;
-      color: #F66297;
-      margin-bottom: 16px;
-      letter-spacing: 0;
-    }
-    .hero__subtitle {
-      font-size: clamp(16px, 1.8vw, 22px);
-      font-weight: 500;
-      color: #F66297;
-      margin-bottom: 40px;
-      line-height: 1.3;
-    }
-    .hero__desc {
-      font-size: 18px;
-      font-weight: 500;
-      color: #000;
-      line-height: 1.4;
-      margin-bottom: 50px;
-    }
-    .hero__btn {
-      display: inline-block;
-      background-color: #F66297;
-      color: #000;
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 22px 40px;
-      border-radius: 100px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Gilroy', 'Inter', sans-serif;
-    }
-    .hero__btn:hover { background: #e05580; transform: translateY(-1px); }
-    .hero__btn:active { transform: translateY(2px); }
-    .hero__note { margin-top: 14px; font-size: 16px; line-height: 1.2; color: #777; font-weight: 500; }
-    .hero__image {
-      flex: 0 0 auto;
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-    .hero__photo { max-height: 600px; width: auto; object-fit: contain; }
-    @media(max-width:900px){
-      .hero__inner { flex-direction: column; }
-      .hero__content { padding: 40px 20px 30px; max-width: 100%; }
-      .hero__image { width: 100%; max-width: 360px; margin: 0 auto; }
-      .hero { min-height: auto; padding-top: 0; }
-    }
-    @media(max-width:600px){
-      .hero__image { display: none; }
-    }
-
-    /* ── ABOUT ── */
-    .about { background: #F3F3F3; padding: 60px 0; }
-    .about__inner { max-width: 700px; margin: 0 auto; padding: 0 20px; }
-    .about__box { background: #fff; border-radius: 30px; padding: 30px; }
-    .about__title {
-      font-size: clamp(20px, 2.5vw, 28px);
-      font-weight: 500;
-      line-height: 1.3;
-      color: #000;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-    .about__title span { color: #F66297; }
-    .about__desc { font-size: 18px; font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 24px; }
-    .about__list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
-    .about__item { display: flex; align-items: flex-start; gap: 12px; text-align: left; }
-    .about__item img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
-    .about__item-text { font-size: 16px; font-weight: 400; color: #000; line-height: 1.4; }
-    .about__slider { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; margin-top: 20px; }
-    .about__slider::-webkit-scrollbar { height: 6px; }
-    .about__slider::-webkit-scrollbar-thumb { background: #F66297; border-radius: 1px; }
-    .about__slide { flex: 0 0 auto; scroll-snap-align: start; }
-    .about__slide img { width: 300px; height: 300px; object-fit: cover; border-radius: 30px; }
-    .about__scroll-hint { font-size: 12px; color: #F66297; display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; }
-    .about__scroll-hint img { width: 15px; height: 15px; }
-
-    /* ── GUARANTEE ── */
-    .guarantee { background: #F3F3F3; padding: 60px 0; }
-    .guarantee__inner { max-width: 700px; margin: 0 auto; padding: 0 20px; }
-    .guarantee__box { background: #fff; border-radius: 30px; padding: 30px; }
-    .guarantee__title { font-size: clamp(20px, 2.5vw, 28px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 24px; }
-    .guarantee__title span { color: #F66297; }
-    .guarantee__list { display: flex; flex-direction: column; gap: 20px; }
-    .guarantee__item { display: flex; align-items: flex-start; gap: 8px; }
-    .guarantee__item img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
-    .guarantee__item-body { font-size: 14px; color: #555; line-height: 1.5; }
-    .guarantee__item-title { display: block; font-size: 16px; font-weight: 500; color: #000; margin-bottom: 4px; }
-
-    /* ── RESULTS ── */
-    .results { background: #F3F3F3; padding: 45px 0; }
-    .results__inner { max-width: 500px; margin: 0 auto; padding: 0 20px; }
-    @media(min-width:1021px){ .results { display: none !important; } }
-    .results__box { background: #fff; border-radius: 30px; padding: 30px; text-align: center; overflow: hidden; }
-    /* gc-slider-block — точная копия оригинала */
-    .f-header-36 p { font-size: 28px; line-height: 1.2; font-weight: 500; font-family: 'Gilroy', Roboto, sans-serif; margin-bottom: 20px; }
-    .gc-top-icons { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
-    .gc-top-item { display: flex; align-items: center; gap: 10px; }
-    .gc-top-item img { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
-    .gc-top-text .accent { font-size: 15px; font-weight: 500; color: #000; line-height: 1.4; }
-    .gc-live-block { display: flex; align-items: center; justify-content: space-between; background: #f9f9f9; border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; }
-    .gc-live-status { display: flex; align-items: center; gap: 8px; }
-    .gc-live-dot { width: 10px; height: 10px; background: #F66297; border-radius: 50%; flex-shrink: 0; animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
-    .gc-live-text { font-size: 14px; color: #555; font-weight: 500; }
-    .gc-live-count { font-size: 22px; font-weight: 600; color: #F66297; }
-    .gc-slider-wrapper { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
-    .gc-slider-wrapper::-webkit-scrollbar { height: 5px; }
-    .gc-slider-wrapper::-webkit-scrollbar-thumb { background: #F66297; border-radius: 3px; }
-    .gc-slider-item { flex: 0 0 auto; scroll-snap-align: start; }
-    .gc-slider-item img { width: 150px; height: 200px; object-fit: cover; border-radius: 16px; display: block; }
-    .gc-slider-text2 { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #F66297; margin-top: 10px; font-weight: 500; }
-    .gc-slider-text2 .arrow-icon { width: 16px; height: 16px; object-fit: contain; }
-
-    /* ── FAQ ── */
-    .faq { background: #F3F3F3; padding: 60px 0; }
-    .faq__inner { max-width: 700px; margin: 0 auto; padding: 0 20px; }
-    .faq__title { font-size: clamp(20px, 2.5vw, 24px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 20px; }
-    .faq-wrapper { max-width: 100%; font-family: 'Gilroy', 'Inter', sans-serif; }
-    .faq-item { border-bottom: 1px solid #ddd; padding: 14px 0; }
-    .faq-question { display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: color 0.3s; }
-    .faq-question:hover { color: #F66297; }
-    .faq-text { text-align: left; flex: 1; font-weight: 500; font-size: 16px; line-height: 1.4; }
-    .faq-icon { font-size: 20px; margin-left: 12px; transition: transform 0.3s; color: #F66297; font-weight: 400; }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-item.active .faq-answer { max-height: 500px; padding-top: 8px; }
-    .faq-item.active .faq-icon { transform: rotate(45deg); }
-    .faq-answer p { margin: 0; text-align: left; font-size: 15px; color: #555; line-height: 1.6; padding-bottom: 10px; }
-
-    /* ── SUPPORT ── */
-    .support-block { background: #F3F3F3; padding: 45px 0; }
-    .support__inner { max-width: 500px; margin: 0 auto; padding: 0 20px; }
-    .support__box { background: #fff; border-radius: 30px; padding: 30px; text-align: center; }
-    .support__title { font-size: 22px; font-weight: 500; margin-bottom: 10px; }
-    .support__desc { font-size: 16px; font-weight: 500; color: #555; margin-bottom: 20px; line-height: 1.4; }
-    .support__links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .support__link { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
-    .support__link img { width: 40px; height: 40px; object-fit: contain; }
-
-    /* ── PROGRAMS ── */
-    .programs { background: #F3F3F3; padding: 45px 0; }
-    .programs__inner { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-    .programs__inner-mobile { max-width: 500px; margin: 0 auto; padding: 0 20px; }
-    .programs__box { background: #fff; border-radius: 30px; padding: 30px; }
-    .programs__title { font-size: clamp(20px,2.5vw,28px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 8px; }
-    .programs__subtitle { font-size: 16px; font-weight: 400; color: #555; text-align: center; margin-bottom: 24px; line-height: 1.4; }
-    /* Tabs */
-    .prog-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-    .prog-tab { padding: 8px 18px; border-radius: 100px; border: 1.5px solid #ddd; font-size: 14px; font-weight: 500; color: #888; cursor: pointer; background: none; font-family: inherit; transition: all .2s; }
-    .prog-tab:hover { border-color: #F66297; color: #F66297; }
-    .prog-tab.active { border-color: #F66297; background: #F66297; color: #fff; }
-    /* Grid */
-    .prog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
-    @media(max-width:1020px){ .prog-grid { grid-template-columns: 1fr; } }
-    .prog-card { border: 1.5px solid #ececec; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
-    .prog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.1); transform: translateY(-2px); }
-    .prog-card__img { height: 160px; background-size: cover; background-position: center; }
-    .prog-card__body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
-    .prog-card__cat { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #F66297; }
-    .prog-card__name { font-size: 16px; font-weight: 600; color: #000; line-height: 1.25; }
-    .prog-card__desc { font-size: 13px; color: #777; line-height: 1.5; flex: 1; }
-    .prog-card__meta { display: flex; gap: 6px; flex-wrap: wrap; }
-    .prog-card__badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; background: #f5f5f5; color: #888; }
-    .prog-card__btn { display: block; margin-top: 10px; width: 100%; padding: 12px; background: #F66297; color: #fff; font-size: 14px; font-weight: 600; border-radius: 12px; text-align: center; border: none; cursor: pointer; font-family: inherit; letter-spacing: 1px; text-transform: uppercase; transition: background .2s; }
-    .prog-card__btn:hover { background: #e05580; }
-    /* Mobile: single column list */
-    @media(max-width:1020px){
-      .programs__desktop { display: none; }
-      .programs__mobile { display: block; }
-    }
-    @media(min-width:1021px){
-      .programs__desktop { display: block; }
-      .programs__mobile { display: none; }
-    }
-    .prog-mobile-card { background: #fff; border-radius: 20px; padding: 16px; margin-bottom: 12px; display: flex; gap: 14px; align-items: flex-start; border: 1.5px solid #ececec; }
-    .prog-mobile-card__img { width: 80px; height: 80px; border-radius: 12px; background-size: cover; background-position: center; flex-shrink: 0; }
-    .prog-mobile-card__body { flex: 1; }
-    .prog-mobile-card__name { font-size: 15px; font-weight: 600; color: #000; margin-bottom: 4px; }
-    .prog-mobile-card__desc { font-size: 13px; color: #777; line-height: 1.4; margin-bottom: 8px; }
-    .prog-mobile-card__btn { display: inline-block; padding: 8px 18px; background: #F66297; color: #fff; font-size: 13px; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: 1px; transition: background .2s; }
-    .prog-mobile-card__btn:hover { background: #e05580; }
-
-    /* ── FORM ── */
-    .form-section { background: #F3F3F3; padding: 45px 0; }
-    .form-section__inner { max-width: 500px; margin: 0 auto; padding: 0 20px; }
-    .form-box { background: #fff; border-radius: 30px; padding: 30px; }
-    .form-box__title { font-size: clamp(20px,2.5vw,26px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 8px; }
-    .form-box__title span { color: #F66297; }
-    .form-box__subtitle { font-size: 15px; color: #555; text-align: center; margin-bottom: 24px; line-height: 1.4; }
-    .lt-form { display: flex; flex-direction: column; gap: 12px; }
-    .f-input {
-      border: 1px solid #D6DBD6; border-radius: 8px; outline: none;
-      background: #fff; padding: 18px 20px;
-      font-weight: 500; font-size: 16px; color: #000;
-      transition: 0.3s all; height: 58px; width: 100%;
-      font-family: 'Gilroy','Inter',sans-serif;
-      box-sizing: border-box;
-    }
-    .f-input:focus { border-color: #FF2686; }
-    .f-input::placeholder { color: #8C8C8C; font-weight: 500; }
-    @media(max-width:640px){ .f-input { font-size: 18px; height: 60px; text-align: center; } }
-    .f-btn {
-      text-decoration: none; text-transform: uppercase; letter-spacing: 2px;
-      text-align: center; background-color: #F66297; color: #000;
-      font-size: 16px; line-height: 1.4; font-weight: 600;
-      border-radius: 100px; padding: 22px 40px; border: none;
-      cursor: pointer; transition: all 0.2s; width: 100%;
-      font-family: 'Gilroy','Inter',sans-serif; margin-top: 4px;
-    }
-    .f-btn:hover { background: #e05580; color: #fff; }
-    .f-btn:active { transform: translateY(2px); }
-    .form-note { font-size: 13px; color: #aaa; text-align: center; line-height: 1.5; margin-top: 4px; }
-    .form-note a { color: #F66297; }
-    .form-success { display: none; text-align: center; padding: 30px 0; }
-    .form-success__icon { font-size: 56px; margin-bottom: 12px; }
-    .form-success__title { font-size: 22px; font-weight: 600; color: #F66297; margin-bottom: 8px; }
-    .form-success__text { font-size: 15px; color: #555; }
-    .global-confirm-checkbox-block { display: flex; align-items: flex-start; gap: 10px; }
-    .global-confirm-checkbox-block input { margin-top: 3px; flex-shrink: 0; accent-color: #F66297; }
-    .global-confirm-checkbox-block .checkbox-text { color: #909090; font-size: 14px; line-height: 1.4; }
-    .global-confirm-checkbox-block .checkbox-text a { color: #d61355; text-decoration: underline; }
-
-    /* ── FOOTER ── */
-    footer { background: #F3F3F3; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
-    .company-info { color: #878787; font-size: 14px; margin: 10px 0 20px; }
-    .company-info strong { color: #444; font-size: 16px; display: block; margin-bottom: 8px; }
-    .police { margin-bottom: 16px; }
-    .police a { color: #878787; font-size: 14px; font-weight: 500; line-height: 28px; display: block; }
-    .police a:hover { color: #F66297; }
-    .social-links { display: flex; gap: 12px; margin-top: 20px; }
-    .social-links img { width: 32px; height: 32px; object-fit: contain; display: block; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Фитнес с Катей Усмановой</title>
+  <meta name="description" content="Копия трех экранов лендинга Usmanova Fit для тестового задания.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero__inner">
-    <div class="hero__content">
-      <div class="hero__title">Приведите тело в форму<br>с чемпионкой Катей<br>Усмановой</div>
-      <div class="hero__subtitle">без диет, голода и запретов<br>с пользой для здоровья</div>
-      <div class="hero__desc">Похудеть, подтянуть попу и живот, набрать форму<br>в зале, восстановиться после родов — тренировки<br>и питание под вашу цель</div>
-      <button class="hero__btn" onclick="location.href='https://usmanovafit.gymteam.ru/partnerregistration'">Выбрать программу</button>
-      <div class="hero__note">Для корректной работы сайта отключите VPN</div>
-    </div>
-    <div class="hero__image">
-      <img class="hero__photo"
-        src="https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/8d7e3aa384b597937b9504925ead6325.png/s/s1200x/a/934144/sc/68"
-        alt="Катя Усманова"
-        onerror="this.src='https://s.gymteam.ru/img/teach/metod/main5.jpg'"
-      />
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMS DESKTOP -->
-<section class="programs">
-  <div class="programs__desktop">
-    <div class="programs__inner">
-      <div class="programs__box">
-        <div class="programs__title">Программы Кати Усмановой</div>
-        <div class="programs__subtitle">Выберите направление и найдите свою программу</div>
-        <div class="prog-tabs" id="progTabs"></div>
-        <div class="prog-grid" id="progGrid"></div>
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Без диет, голода и запретов</p>
+        <h1>Приведите тело в форму с чемпионкой Катей Усмановой</h1>
+        <p class="hero__text">Похудеть, подтянуть попу и живот, набрать форму в зале, восстановиться после родов — тренировки и питание под вашу цель.</p>
+        <div class="hero__actions">
+          <button class="button" data-go="partner">Выбрать программу</button>
+          <button class="button button--ghost" data-go="method">Вернуть форму</button>
+        </div>
+        <p class="note">Для корректной работы сайта отключите VPN</p>
       </div>
-    </div>
-  </div>
-  <!-- PROGRAMS MOBILE -->
-  <div class="programs__mobile">
-    <div class="programs__inner-mobile">
-      <div class="programs__box">
-        <div class="programs__title">Программы Кати Усмановой</div>
-        <div class="programs__subtitle">Выберите направление и найдите свою программу</div>
-        <div class="prog-tabs" id="progTabsMob"></div>
-        <div id="progListMob"></div>
+      <div class="hero__media" aria-hidden="true">
+        <img src="https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/8d7e3aa384b597937b9504925ead6325.png/s/s1200x/a/934144/sc/68" alt="">
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FORM -->
-<section class="form-section" id="form">
-  <div class="form-section__inner">
-    <div class="form-box">
-      <div id="formInner">
-        <div class="form-box__title">Выбрать <span>программу</span></div>
-        <div class="form-box__subtitle">Оставьте заявку — мы поможем подобрать программу под вашу цель и уровень</div>
-        <div class="lt-form">
-          <input class="f-input" type="text" id="fname" placeholder="Ваше имя" />
-          <input class="f-input" type="tel" id="fphone" placeholder="Номер телефона" />
-          <input class="f-input" type="email" id="femail" placeholder="Email" />
-          <div class="global-confirm-checkbox-block">
-            <input type="checkbox" id="fcheck" checked />
-            <span class="checkbox-text">Я принимаю условия <a href="https://usmanovafit.gymteam.ru/oferta_fitnes" target="_blank">оферты</a> и даю согласие на <a href="https://usmanovafit.gymteam.ru/personaldata" target="_blank">обработку персональных данных</a></span>
+    <section class="band">
+      <div class="panel intro-panel">
+        <p class="mini">Не получается сейчас выбрать? Это нормально.</p>
+        <h2>Давайте сохраним ваш интерес и вернём форму, когда будете готовы</h2>
+        <p>На странице формы можно выбрать формат участия, увидеть тарифы и оставить контакты. Кнопка ниже ведёт на локальную копию этого экрана.</p>
+        <button class="button button--small" data-go="method">Вернуть форму</button>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="section-head">
+        <p class="eyebrow">Направления</p>
+        <h2>Программы Кати Усмановой</h2>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card program-card--featured">
+          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/129/h/9993958238de93cfb42027db3748b8fe.png" alt="Метод Усмановой">
+          <div>
+            <p class="tag">Тренировки дома</p>
+            <h3>Метод Усмановой</h3>
+            <p>20 тренировок, питание по неделям, растяжка и восстановление. Старт для тех, кто хочет вернуться в форму.</p>
+            <button class="button button--small" data-go="partner">Выбрать программу</button>
           </div>
-          <button class="f-btn" onclick="submitForm()">Выбрать программу</button>
-          <div class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="https://usmanovafit.gymteam.ru/protection_fitnes" target="_blank">политикой конфиденциальности</a></div>
-        </div>
-      </div>
-      <div class="form-success" id="formSuccess">
-        <div class="form-success__icon">🎉</div>
-        <div class="form-success__title">Заявка принята!</div>
-        <div class="form-success__text">Мы свяжемся с вами в ближайшее время и поможем выбрать программу</div>
-      </div>
-    </div>
-  </div>
-</section>
+        </article>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about__inner">
-    <div class="about__box">
-      <div class="about__title">Доверьте свое тело чемпионке фитнес-бикини и тренеру <span>Кате Усмановой</span></div>
-      <div class="about__desc">С 2015 года создаёт топовые тренировки для идеальных ягодиц, плоского живота и стройности без жёстких диет.<br>Уже более 580 000+ участниц тренируются с Катей, ведь она:</div>
-      <div class="about__list">
-        <div class="about__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/304/h/b9c77eb09cdae6dee48606d88134a74c.png" alt="">
-          <span class="about__item-text">Вице-чемпионка мира и&nbsp;чемпионка России по&nbsp;фитнес-бикини</span>
-        </div>
-        <div class="about__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/304/h/b9c77eb09cdae6dee48606d88134a74c.png" alt="">
-          <span class="about__item-text">Профессиональный фитнес-тренер с&nbsp;опытом более 15&nbsp;лет</span>
-        </div>
-        <div class="about__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/304/h/b9c77eb09cdae6dee48606d88134a74c.png" alt="">
-          <span class="about__item-text">Мама 2-х детей. Всего за&nbsp;100&nbsp;дней после&nbsp;первых родов похудела на&nbsp;20&nbsp;кг&nbsp;и&nbsp;вернулась в&nbsp;прежнюю форму</span>
-        </div>
-        <div class="about__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/304/h/b9c77eb09cdae6dee48606d88134a74c.png" alt="">
-          <span class="about__item-text">Автор первых в&nbsp;России масштабных марафонов стройности</span>
-        </div>
-        <div class="about__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/304/h/b9c77eb09cdae6dee48606d88134a74c.png" alt="">
-          <span class="about__item-text">Чемпионка России и&nbsp;мира по&nbsp;жиму лёжа</span>
-        </div>
-      </div>
-      <div class="about__slider">
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/220/h/c79ef9787c5e268d93a54f1e02e46ec3.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/284/h/1383cc163d1d98ed9a0bc68d4a2ffc03.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/464/h/fc6a33bedad095fcceb9b228a0e26ba1.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/484/h/52d50659565480b991c629cf6453df15.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/361/h/4b1c3f214dc7c40c17af48103ddcbdeb.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/250/h/fde40eec42d735ce23b758f6b8282d08.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/327/h/d4d3841aca9fb0bd2b9666c23d217cfa.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/492/h/8a1d46cc0fd29eca5de6eee284ff79ab.png" alt=""></div>
-        <div class="about__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/345/h/ad4b02d76a6edaa89ff9eb93052b54e9.png" alt=""></div>
-      </div>
-      <div class="about__scroll-hint">Листайте вправо <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png" alt=""></div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="guarantee" id="guarantee">
-  <div class="guarantee__inner">
-    <div class="guarantee__box">
-      <div class="guarantee__title">Программы <span>Кати Усмановой —</span><br>это всегда гарантия</div>
-      <div class="guarantee__list">
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/156/h/2763ac160cede385a9750c5c16949f8b.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия лучшей цены</span>Самая лояльная цена на рынке фитнеса для комплекта тренировок с таким глубоким содержанием программ, направленных на быстрый результат.</div>
-        </div>
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/405/h/0a9c7a9e95e3ef15eb65dff4c5cd558d.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия уникальности программ</span>Все программы тренировок разработаны лично Катей Усмановой и проверены на её опыте.</div>
-        </div>
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/39/h/ed8f51b410433972d8c64a143512c40f.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия результата при соблюдении всех рекомендаций</span>Задания и рекомендации помогают закреплять результат и мотивируют двигаться дальше.</div>
-        </div>
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/53/h/8280b234a81d52529d7f6d108770bd6e.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия соблюдения сроков обучения</span>Все программы будут открыты в указанный срок с согласованным доступом.</div>
-        </div>
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/482/h/9f1bf7cb3cb138eee913bb9fb6b2cb6d.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия юридической чистоты сделки</span>Оплата проходит через кассу, вы получите чек на свой e-mail.</div>
-        </div>
-        <div class="guarantee__item">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/45/h/039d31c6cb12f83456eaa75f51574225.png" alt="">
-          <div class="guarantee__item-body"><span class="guarantee__item-title">Гарантия предоставления необходимой информации</span>Мы предоставим все материалы, необходимые вам для быстрого достижения результата. У вас не останется вопросов по питанию и тренировкам.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section class="results" id="results">
-  <div class="results__inner">
-    <div class="results__box">
-      <div class="f-header-36"><p><span style="color:#F66297;">580 000 девушек</span><br>уже тренируются с Катей</p></div>
-      <div class="gc-slider-block">
-        <div class="gc-top-icons">
-          <div class="gc-top-item">
-            <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png">
-            <div class="gc-top-text"><span class="accent">Первые видимые результаты уже на 6-й день тренировок</span></div>
+        <article class="program-card">
+          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/182/h/8261c10bf388dcc255c1368cf0ada516.png" alt="Зал">
+          <div>
+            <p class="tag">Тренировки в зале</p>
+            <h3>Два месяца</h3>
+            <p>Понятная программа для зала: техника, нагрузка и план занятий без хаоса.</p>
+            <button class="button button--small" data-go="partner">Выбрать программу</button>
           </div>
-          <div class="gc-top-item">
-            <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png">
-            <div class="gc-top-text"><span class="accent">В&nbsp;среднем ученицы теряют 4–6&nbsp;кг&nbsp;за&nbsp;первый месяц</span></div>
+        </article>
+
+        <article class="program-card">
+          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/389/h/670dcb85eab5786fd01def671ea3da4f.png" alt="После родов">
+          <div>
+            <p class="tag">После родов</p>
+            <h3>Фитнес-восстановление</h3>
+            <p>Мягкое возвращение к тренировкам с фокусом на безопасность и регулярность.</p>
+            <button class="button button--small" data-go="partner">Выбрать программу</button>
           </div>
-        </div>
-        <div class="gc-live-block">
-          <div class="gc-live-status">
-            <span class="gc-live-dot"></span>
-            <span class="gc-live-text">Тренируются прямо сейчас</span>
-          </div>
-          <div class="gc-live-count" id="liveCount">3&nbsp;688</div>
-        </div>
-        <div class="gc-slider-wrapper">
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/94/h/e343f4d439f4b13c84cb913077071cd3.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/230/h/4cf84691bdd21dd0b41c2429d33ce41f.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/255/h/72ba9dfec18d7aa5779fe30e50e96901.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/155/h/8599ac4937cd2e230b6f166b38360fdc.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/160/h/2bd976f53f5b603513aaf6c73c49849e.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/85/h/690560420ca42fc7a6b317093fb821fb.jpg" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/139/h/5036c96213b02e41fb598f21fe15a8ae.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/103/h/e6b1004aba9723d7297e885d7b7734c0.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/252/h/d01b54d8feaf7279cbc7c4518c4e2847.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/252/h/592a51399910dc08b1f0eadde97ade89.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/142/h/00a78a3ac2a08bb9d9f2908647e44d60.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/301/h/02e95b9e4eb6e8e58efee5196132db0b.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/292/h/7ee60d3912e2b799c4fe113ebb93a5bd.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/53/h/3b9cb31d569285a187e93b18b3a55532.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/189/h/32b870e107523b9cc771dfd294fba7b1.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/374/h/1b12583b7b7cd12c7ab0b2bdee77c7ef.jpg" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/73/h/804bfecb9a8fcf5ec3f16ffaf93cda1e.jpg" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/250/h/7f0f4a2cf3c50d78a27e14245e4f8f7f.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/152/h/1a1b668b6a6ca5d773e217962f914ad9.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/180/h/50ca8ad355cd4719508bb540f710af3c.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/327/h/c9bfc4705e9b3cbce6c13e9da01417c0.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/237/h/3c7b5b19fb9aa846113c11e9aa039cf9.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/216/h/2794e581ecdc6e9d862e8cb38e290f05.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/67/h/98ffb7c51f1095a065595b114899d1c6.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/25/h/8d5927a721308210f44037b3bab4f00a.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/431/h/f18aff64a8bbe076cb44b6771ae0eeea.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/163/h/02607eeac92f31cbdd82e01b210542a3.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/152/h/d969754091814521abf9dfb4ae52ef30.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/466/h/e6731753b20d7105829b25c647a495c2.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/279/h/fc0105f09e1adebf737be8f28a2f6020.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/476/h/7e7da4e3429091ebcba34ae2dacdc8ff.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/155/h/8166e36b19d267ae7800676b59fbb0cd.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/340/h/d055adcab15f7e4dc74eb6e3f384285d.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/510/h/9145babaa6fa6efd58a85adabc0dc0b3.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/98/h/82c302be6ef9742616022c43b7d7e1f7.heif" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/91/h/b967f84f2ca502c25068fb1b1b622644.heif" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/240/h/c5a8042727fbd35f45e3d9124e1c6fda.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/57/h/2d3512fa77d6178c792129fe0b271f56.heic" alt=""></div>
-          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/154/h/304363de2a7f1ddde4349e2946d816f5.heic" alt=""></div>
-        </div>
-        <div class="gc-slider-text2">Листай вправо <img class="arrow-icon" src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png" alt=""></div>
+        </article>
       </div>
-    </div>
+    </section>
+
+    <section class="results">
+      <div class="section-head">
+        <p class="eyebrow">Сообщество</p>
+        <h2>580 000 девушек уже тренируются с Катей</h2>
+      </div>
+      <div class="result-strip" aria-label="Примеры результатов">
+        <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/94/h/e343f4d439f4b13c84cb913077071cd3.heic" alt="Результат участницы">
+        <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/230/h/4cf84691bdd21dd0b41c2429d33ce41f.heic" alt="Результат участницы">
+        <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/255/h/72ba9dfec18d7aa5779fe30e50e96901.heic" alt="Результат участницы">
+        <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/85/h/690560420ca42fc7a6b317093fb821fb.jpg" alt="Результат участницы">
+      </div>
+    </section>
+  </main>
+
+  <div class="cookie" data-cookie>
+    <p>Мы используем cookie-файлы. Это нужно для лучшей работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</p>
+    <button class="button button--tiny" data-cookie-ok>OK</button>
   </div>
-</section>
 
-<script>
-  (function() {
-    const el = document.getElementById('liveCount');
-    if (!el) return;
-    let count = 3696;
-    function update() {
-      const change = Math.floor(Math.random() * 10) - 5;
-      count = Math.max(3500, count + change);
-      el.textContent = count.toLocaleString('ru-RU');
-    }
-    setInterval(update, 5 * 60 * 1000);
-  })();
-</script>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="faq__inner">
-    <div class="faq__title">Отвечаем на вопросы</div>
-    <div class="faq-wrapper">
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Подойдёт ли мне программа, если я никогда не тренировалась?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Да. На витрине есть программы для старта с нуля — например, Метод Усмановой и Марафон стройности. Катя показывает и объясняет каждое движение, вы просто повторяете. Если не знаете, с чего начать, напишите нам — поможем выбрать программу под вашу цель и уровень.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Сколько времени в день нужно на тренировки?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>От 20 до 45 минут. Заниматься можно в любое удобное время — расписания нет, уроки открыты, включаете когда вам удобно днём или вечером.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Можно ли тренироваться дома? Нужно ли оборудование?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Да, все программы рассчитаны на занятия дома. Для большинства достаточно коврика и собственного веса. Для некоторых программ пригодится минимальный инвентарь — фитнес-резинка, лёгкие гантели или утяжелители.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">На какой срок открывается доступ к программе?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Срок доступа указан в описании каждой программы.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Можно ли оплатить в рассрочку?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Да, рассрочка доступна. Условия указаны при оформлении заказа.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Могу ли я оплатить картой иностранного банка?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Да. При оформлении заказа нажмите «Оплатить картой иностранного банка», выберите удобный способ на платёжной странице и подтвердите оплату.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Я живу не в России. Смогу заниматься?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Да. Тренировки доступны в любой точке мира — нужен только смартфон, планшет или компьютер с интернетом.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Как я получу доступ после оплаты?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Доступ к программам открывается в личном кабинете сразу после оплаты. Авторизация — по номеру телефона, который вы указали при оформлении заказа.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question"><span class="faq-text">Я оплатила, но не вижу доступ. Что делать?</span><span class="faq-icon">+</span></div>
-        <div class="faq-answer"><p>Проверьте, что авторизовались по тому же номеру телефона, который указывали при оплате. Если доступа всё равно нет, напишите в поддержку, поможем.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT -->
-<section class="support-block">
-  <div class="support__inner">
-    <div class="support__box">
-      <div class="support__title">НЕ ЗНАЕТЕ, С ЧЕГО НАЧАТЬ?</div>
-      <div class="support__desc">Напишите нам и подберём программу под вашу цель и уровень.<br>Это бесплатно и быстро.</div>
-      <div class="support__links">
-        <a class="support__link" href="https://t.me/UsmanovaSport_bot" target="_blank">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/656842/sc/91/h/8fec80b0270502eee473a97d551b0561.svg" alt="Telegram">
-        </a>
-        <a class="support__link" href="https://vk.ru/usmanovateam" target="_blank">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/656842/sc/200/h/c25f8ab693de5b24cfd8c069917051b5.svg" alt="VK">
-        </a>
-        <a class="support__link" href="mailto:help@usmanovasport.ru">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/656842/sc/314/h/162edcaeb5a552d600eb62fbc50e622c.svg" alt="Email">
-        </a>
-        <a class="support__link" href="https://max.ru/id7734434533_1_bot" target="_blank">
-          <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/140/h/2e4566e258654949d8dff68c39757fcb.png" alt="MAX">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="company-info">
-    <strong>©️ ООО «Онлайн Фитнес», 2020 — 2026.</strong>
-    <p>ИНН 7734434533<br>КПП 773401001<br>ОГРН 1207700175209<br><br>г.Москва, ул.Щукинская, д.2, этаж/офис цокольный/32</p>
-  </div>
-  <div class="police">
-    <a href="https://usmanovafit.gymteam.ru/cms/system/contact" target="_blank">Служба заботы</a>
-    <a href="https://usmanovafit.gymteam.ru/oferta_fitnes" target="_blank">Оферта</a>
-    <a href="https://usmanovafit.gymteam.ru/protection_fitnes" target="_blank">Политика конфиденциальности</a>
-    <a href="https://usmanovafit.gymteam.ru/personaldata" target="_blank">Согласие на обработку персональных данных</a>
-  </div>
-  <div class="social-links">
-    <a href="https://vk.ru/usmanovateam" target="_blank"><img src="https://fs.getcourse.ru/fileservice/file/download/a/656842/sc/200/h/c25f8ab693de5b24cfd8c069917051b5.svg" alt="VK"></a>
-    <a href="https://t.me/UsmanovaSport_bot" target="_blank"><img src="https://fs.getcourse.ru/fileservice/file/download/a/656842/sc/91/h/8fec80b0270502eee473a97d551b0561.svg" alt="Telegram"></a>
-    <a href="https://max.ru/id7734434533_1_bot" target="_blank"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/140/h/2e4566e258654949d8dff68c39757fcb.png" alt="MAX"></a>
-  </div>
-</footer>
-
-<script>
-const programs = [
-  { cat: 'Дома', icon: '🏠', name: 'Метод Усмановой', desc: 'Обновлённый метод: 20 тренировок с Катей, питание по неделям с меню и списком покупок. −3–5 кг и до 6 см с талии.', duration: '4 недели', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/metod/main5.jpg', url: 'https://usmanovafit.gymteam.ru/maysale2026_7' },
-  { cat: 'Дома', icon: '🏠', name: 'Марафон стройности 1.0', desc: 'Стройное тело за 21 день домашних тренировок без инвентаря и правильного питания.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/stroynost/r1920.jpg', url: 'https://gymteam.ru/trainings/marafon-stroinosti-1-0' },
-  { cat: 'Дома', icon: '🏠', name: 'Марафон стройности 2.0', desc: 'Стройность и рельеф за 21 день: домашние тренировки + рекомендации по питанию.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/stroynost2/str2.jpg', url: 'https://gymteam.ru/trainings/marafon-stroinosti-2-0' },
-  { cat: 'Дома', icon: '🏠', name: 'Убираем лишний жир', desc: 'Тренировки для дома и зала, план питания и техники антицеллюлитного массажа.', duration: '30 дней', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/ubiraem_lishnii_zhir/ulzh.jpg', url: 'https://gymteam.ru/trainings/kompleks-dlya-zhiroszhiganiya' },
-  { cat: 'Зал', icon: '🏋️', name: 'Курс для зала. Цикл №1', desc: 'Техника выполнения базовых упражнений. Старт в зале с нуля — правильно и без травм.', duration: '8 недель', level: 'Начинающий', img: 'https://s.gymteam.ru/img/teach/zal_1_c1/main2.jpg', url: 'https://gymteam.ru/trainings/kurs-dlya-zala-tehnika' },
-  { cat: 'Зал', icon: '🏋️', name: 'Идеальная попа 3.0', desc: '2 этапа: набор мышечной массы и «шлифовка» ягодиц. 5 тренировок в неделю + планы питания.', duration: '3 месяца', level: 'Hard', img: 'https://s.gymteam.ru/img/teach/idealpopa3/idealpopa3.jpg', url: 'https://gymteam.ru/trainings/idealnaya-popa-3' },
-  { cat: 'Зал', icon: '🏋️', name: 'Идеальная попа 2.0', desc: 'Программа на ягодицы для тех, кто уже знаком с тренировками в зале.', duration: '10 недель', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/idealpopa2/idealpopa2.jpg', url: 'https://gymteam.ru/trainings/idealnaya-popa-2-0-programma' },
-  { cat: 'После родов', icon: '👶', name: 'Фитнес-восстановление после родов', desc: 'Тренировки без вреда для лактации. 30 домашних тренировок, кабинет диетолога.', duration: '12 недель', level: 'Light', img: 'https://s.gymteam.ru/img/teach/fitnesabonement/fitnesabonement.jpg', url: 'https://usmanovateam.ru/poslerodov' },
-  { cat: 'Питание', icon: '🥗', name: 'Антицеллюлитный марафон', desc: 'Антистресс-программа: домашние тренировки, база знаний по питанию, массаж и лекции эндокринолога.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/Antiselulit/anticell.jpg', url: 'https://gymteam.ru/trainings/anticellulitny-marafon' },
-  { cat: 'Питание', icon: '🥗', name: 'Красивая и упругая попа 1.0', desc: '21 день ежедневных тренировок + рекомендации по питанию.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/popa1/popa1_cover.jpg', url: 'https://gymteam.ru/trainings/krasivaya-upugaya-popa' },
-  { cat: 'Любовь к себе', icon: '💖', name: 'Любовь к себе 2.0', desc: '8 лет психологических практик за 30 дней. Самооценка, избавление от страхов и вредных установок.', duration: '30 дней', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/idealpopa1/idealpopa1.jpg', url: 'https://usmanovateam.ru/love2.0' },
-];
-
-function renderPrograms(catFilter) {
-  const cats = ['Все', ...new Set(programs.map(p => p.cat))];
-  // Desktop tabs
-  const tabs = document.getElementById('progTabs');
-  if (tabs) {
-    tabs.innerHTML = cats.map(c => `<button class="prog-tab${c===catFilter?' active':''}" onclick="renderPrograms('${c}')">${c}</button>`).join('');
-  }
-  const grid = document.getElementById('progGrid');
-  if (grid) {
-    const filtered = catFilter==='Все' ? programs : programs.filter(p=>p.cat===catFilter);
-    grid.innerHTML = filtered.map(p => `
-      <div class="prog-card">
-        <div class="prog-card__img" style="background-image:url('${p.img}')"></div>
-        <div class="prog-card__body">
-          <div class="prog-card__cat">${p.icon} ${p.cat}</div>
-          <div class="prog-card__name">${p.name}</div>
-          <div class="prog-card__desc">${p.desc}</div>
-          <div class="prog-card__meta">
-            <span class="prog-card__badge">📅 ${p.duration}</span>
-            <span class="prog-card__badge">⚡ ${p.level}</span>
-          </div>
-          <a class="prog-card__btn" href="${p.url}" target="_blank">Подробнее</a>
-        </div>
-      </div>`).join('');
-  }
-  // Mobile tabs
-  const tabsMob = document.getElementById('progTabsMob');
-  if (tabsMob) {
-    tabsMob.innerHTML = cats.map(c => `<button class="prog-tab${c===catFilter?' active':''}" onclick="renderPrograms('${c}')">${c}</button>`).join('');
-  }
-  const listMob = document.getElementById('progListMob');
-  if (listMob) {
-    const filtered = catFilter==='Все' ? programs : programs.filter(p=>p.cat===catFilter);
-    listMob.innerHTML = filtered.map(p => `
-      <div class="prog-mobile-card">
-        <div class="prog-mobile-card__img" style="background-image:url('${p.img}')"></div>
-        <div class="prog-mobile-card__body">
-          <div class="prog-mobile-card__name">${p.name}</div>
-          <div class="prog-mobile-card__desc">${p.desc}</div>
-          <a class="prog-mobile-card__btn" href="${p.url}" target="_blank">Подробнее</a>
-        </div>
-      </div>`).join('');
-  }
-}
-renderPrograms('Все');
-
-function submitForm() {
-  const name = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('fphone').value.trim();
-  const check = document.getElementById('fcheck').checked;
-  if (!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return; }
-  if (!check) { alert('Необходимо принять условия'); return; }
-  document.getElementById('formInner').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-}
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.closest('.faq-item');
-      const isActive = item.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('active');
-        i.querySelector('.faq-icon').textContent = '+';
-      });
-      if (!isActive) {
-        item.classList.add('active');
-        item.querySelector('.faq-icon').textContent = '×';
-      }
-    });
-  });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
