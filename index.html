@@ -159,19 +159,29 @@
     .guarantee__item-title { display: block; font-size: 16px; font-weight: 500; color: #000; margin-bottom: 4px; }
 
     /* ── RESULTS ── */
-    .results { background: #F3F3F3; padding: 60px 0; }
-    .results__inner { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+    .results { background: #F3F3F3; padding: 45px 0; }
+    .results__inner { max-width: 500px; margin: 0 auto; padding: 0 20px; }
+    @media(min-width:1021px){ .results { display: none !important; } }
     .results__box { background: #fff; border-radius: 30px; padding: 30px; text-align: center; overflow: hidden; }
-    .results__title { font-size: clamp(20px, 2.5vw, 28px); font-weight: 500; line-height: 1.3; margin-bottom: 16px; }
-    .results__title span { color: #FF63AE; }
-    .results__subtitle { font-size: 18px; font-weight: 500; line-height: 1.3; margin-bottom: 20px; }
-    .results__slider { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; }
-    .results__slider::-webkit-scrollbar { height: 6px; }
-    .results__slider::-webkit-scrollbar-thumb { background: #FF63AE; border-radius: 1px; }
-    .results__slide { flex: 0 0 auto; width: 180px; scroll-snap-align: start; }
-    .results__slide img { width: 180px; height: 320px; object-fit: cover; border-radius: 30px; }
-    .results__scroll-hint { font-size: 12px; color: #FF63AE; display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; }
-    .results__scroll-hint img { width: 15px; height: 15px; }
+    /* gc-slider-block — точная копия оригинала */
+    .f-header-36 p { font-size: 28px; line-height: 1.2; font-weight: 500; font-family: 'Gilroy', Roboto, sans-serif; margin-bottom: 20px; }
+    .gc-top-icons { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .gc-top-item { display: flex; align-items: center; gap: 10px; }
+    .gc-top-item img { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+    .gc-top-text .accent { font-size: 15px; font-weight: 500; color: #000; line-height: 1.4; }
+    .gc-live-block { display: flex; align-items: center; justify-content: space-between; background: #f9f9f9; border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; }
+    .gc-live-status { display: flex; align-items: center; gap: 8px; }
+    .gc-live-dot { width: 10px; height: 10px; background: #F66297; border-radius: 50%; flex-shrink: 0; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
+    .gc-live-text { font-size: 14px; color: #555; font-weight: 500; }
+    .gc-live-count { font-size: 22px; font-weight: 600; color: #F66297; }
+    .gc-slider-wrapper { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+    .gc-slider-wrapper::-webkit-scrollbar { height: 5px; }
+    .gc-slider-wrapper::-webkit-scrollbar-thumb { background: #F66297; border-radius: 3px; }
+    .gc-slider-item { flex: 0 0 auto; scroll-snap-align: start; }
+    .gc-slider-item img { width: 150px; height: 200px; object-fit: cover; border-radius: 16px; display: block; }
+    .gc-slider-text2 { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #F66297; margin-top: 10px; font-weight: 500; }
+    .gc-slider-text2 .arrow-icon { width: 16px; height: 16px; object-fit: contain; }
 
     /* ── FAQ ── */
     .faq { background: #F3F3F3; padding: 60px 0; }
@@ -450,28 +460,85 @@
 <section class="results" id="results">
   <div class="results__inner">
     <div class="results__box">
-      <div class="results__title">Девушки, которые тренируются с Катей <span>прямо сейчас</span></div>
-      <div class="results__subtitle">Реальные истории, реальные результаты. Присоединяйся — следующая история будет твоей.</div>
-      <div class="results__slider">
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/237/h/2aa546db37de028e6ac3fb2786aa9452.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/38/h/015a42f6b21340f961a0e833b605ff95.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/495/h/b036e1e277a452313500ee564d32226e.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/249/h/dd8e197e7f36e1bee9bd7162290a108b.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/95/h/103262c11e49bf118407189cbc9f6fa7.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/391/h/c2e4edfc1f5e5b4954e6bc3615cf7d2d.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/117/h/17387c8056b84e63d149fbf2be7831f7.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/144/h/ee1a890d85ca6313ede946437c41b602.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/150/h/d5875e3b213d3591fd51ab2d1688f28c.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/55/h/559d6d0bef8e3d5970611b31f7125454.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/496/h/9da6fdbf3d6e9ecfe79438a24aef12be.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/103/h/119be526e615610de88bb989041dac57.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/328/h/924c8e30f9c3c1aafb26bdf08bec2182.jpg" alt=""></div>
-        <div class="results__slide"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/361/h/2d2c02e946c10e6fb4d4e2d0ccc4da0d.jpg" alt=""></div>
+      <div class="f-header-36"><p><span style="color:#F66297;">580 000 девушек</span><br>уже тренируются с Катей</p></div>
+      <div class="gc-slider-block">
+        <div class="gc-top-icons">
+          <div class="gc-top-item">
+            <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png">
+            <div class="gc-top-text"><span class="accent">Первые видимые результаты уже на 6-й день тренировок</span></div>
+          </div>
+          <div class="gc-top-item">
+            <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png">
+            <div class="gc-top-text"><span class="accent">В&nbsp;среднем ученицы теряют 4–6&nbsp;кг&nbsp;за&nbsp;первый месяц</span></div>
+          </div>
+        </div>
+        <div class="gc-live-block">
+          <div class="gc-live-status">
+            <span class="gc-live-dot"></span>
+            <span class="gc-live-text">Тренируются прямо сейчас</span>
+          </div>
+          <div class="gc-live-count" id="liveCount">3&nbsp;688</div>
+        </div>
+        <div class="gc-slider-wrapper">
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/94/h/e343f4d439f4b13c84cb913077071cd3.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/230/h/4cf84691bdd21dd0b41c2429d33ce41f.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/255/h/72ba9dfec18d7aa5779fe30e50e96901.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/155/h/8599ac4937cd2e230b6f166b38360fdc.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/160/h/2bd976f53f5b603513aaf6c73c49849e.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/85/h/690560420ca42fc7a6b317093fb821fb.jpg" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/139/h/5036c96213b02e41fb598f21fe15a8ae.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/103/h/e6b1004aba9723d7297e885d7b7734c0.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/252/h/d01b54d8feaf7279cbc7c4518c4e2847.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/252/h/592a51399910dc08b1f0eadde97ade89.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/142/h/00a78a3ac2a08bb9d9f2908647e44d60.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/301/h/02e95b9e4eb6e8e58efee5196132db0b.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/292/h/7ee60d3912e2b799c4fe113ebb93a5bd.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/53/h/3b9cb31d569285a187e93b18b3a55532.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/189/h/32b870e107523b9cc771dfd294fba7b1.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/374/h/1b12583b7b7cd12c7ab0b2bdee77c7ef.jpg" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/73/h/804bfecb9a8fcf5ec3f16ffaf93cda1e.jpg" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/250/h/7f0f4a2cf3c50d78a27e14245e4f8f7f.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/152/h/1a1b668b6a6ca5d773e217962f914ad9.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/180/h/50ca8ad355cd4719508bb540f710af3c.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/327/h/c9bfc4705e9b3cbce6c13e9da01417c0.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/237/h/3c7b5b19fb9aa846113c11e9aa039cf9.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/216/h/2794e581ecdc6e9d862e8cb38e290f05.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/67/h/98ffb7c51f1095a065595b114899d1c6.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/25/h/8d5927a721308210f44037b3bab4f00a.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/431/h/f18aff64a8bbe076cb44b6771ae0eeea.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/163/h/02607eeac92f31cbdd82e01b210542a3.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/152/h/d969754091814521abf9dfb4ae52ef30.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/466/h/e6731753b20d7105829b25c647a495c2.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/279/h/fc0105f09e1adebf737be8f28a2f6020.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/476/h/7e7da4e3429091ebcba34ae2dacdc8ff.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/155/h/8166e36b19d267ae7800676b59fbb0cd.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/340/h/d055adcab15f7e4dc74eb6e3f384285d.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/510/h/9145babaa6fa6efd58a85adabc0dc0b3.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/98/h/82c302be6ef9742616022c43b7d7e1f7.heif" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/91/h/b967f84f2ca502c25068fb1b1b622644.heif" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/240/h/c5a8042727fbd35f45e3d9124e1c6fda.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/57/h/2d3512fa77d6178c792129fe0b271f56.heic" alt=""></div>
+          <div class="gc-slider-item"><img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/154/h/304363de2a7f1ddde4349e2946d816f5.heic" alt=""></div>
+        </div>
+        <div class="gc-slider-text2">Листай вправо <img class="arrow-icon" src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png" alt=""></div>
       </div>
-      <div class="results__scroll-hint">Листайте вправо <img src="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/295/h/3e5dd3a1d566a7f5fc0745fff3f0158c.png" alt=""></div>
     </div>
   </div>
 </section>
+
+<script>
+  (function() {
+    const el = document.getElementById('liveCount');
+    if (!el) return;
+    let count = 3696;
+    function update() {
+      const change = Math.floor(Math.random() * 10) - 5;
+      count = Math.max(3500, count + change);
+      el.textContent = count.toLocaleString('ru-RU');
+    }
+    setInterval(update, 5 * 60 * 1000);
+  })();
+</script>
 
 <!-- FAQ -->
 <section class="faq" id="faq">
