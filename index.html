@@ -42,36 +42,6 @@
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    /* ── NAVBAR ── */
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: #fff; border-bottom: 1px solid #f0f0f0;
-      padding: 14px 0; transition: box-shadow .3s;
-    }
-    .navbar.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.08); }
-    .navbar__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .navbar__logo { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #F66297; cursor: pointer; }
-    .navbar__links { display: flex; align-items: center; gap: 4px; }
-    .navbar__links a, .navbar__links button {
-      font-size: 14px; font-weight: 500; color: #555;
-      padding: 8px 14px; border-radius: 8px;
-      transition: color .2s, background .2s; background: none; border: none;
-    }
-    .navbar__links a:hover, .navbar__links button:hover { color: #F66297; background: #fff0f5; }
-    .navbar__cta { background: #F66297 !important; color: #fff !important; border-radius: 100px !important; padding: 10px 24px !important; font-weight: 600 !important; letter-spacing: 1px; text-transform: uppercase; font-size: 13px !important; }
-    .navbar__cta:hover { background: #e05580 !important; color: #fff !important; }
-    .navbar__burger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; }
-    .navbar__burger span { display: block; width: 24px; height: 2px; background: #333; border-radius: 2px; transition: all .3s; }
-    @media(max-width:768px){
-      .navbar__links { display: none; }
-      .navbar__links.open {
-        display: flex; flex-direction: column; position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: #fff; align-items: center; justify-content: center; gap: 20px; z-index: 999;
-      }
-      .navbar__links.open a, .navbar__links.open button { font-size: 20px; }
-      .navbar__burger { display: flex; z-index: 1001; }
-    }
 
     /* ── HERO ── */
     .hero {
@@ -79,7 +49,7 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding-top: 70px;
+      padding-top: 0;
       overflow: hidden;
     }
     .hero__inner {
@@ -90,7 +60,7 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    .hero__content { flex: 1; padding: 60px 40px 60px 0; max-width: 540px; }
+    .hero__content { flex: 1; padding: 60px 40px 60px 60px; max-width: 560px; }
     .hero__title {
       font-size: clamp(26px, 3.5vw, 48px);
       font-weight: 600;
@@ -142,9 +112,9 @@
     .hero__photo { max-height: 600px; width: auto; object-fit: contain; }
     @media(max-width:900px){
       .hero__inner { flex-direction: column; }
-      .hero__content { padding: 40px 0 30px; max-width: 100%; }
+      .hero__content { padding: 40px 20px 30px; max-width: 100%; }
       .hero__image { width: 100%; max-width: 360px; margin: 0 auto; }
-      .hero { min-height: auto; padding-top: 80px; }
+      .hero { min-height: auto; padding-top: 0; }
     }
     @media(max-width:600px){
       .hero__image { display: none; }
@@ -240,23 +210,6 @@
   </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="navbar__inner">
-    <div class="navbar__logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">USMANOVA</div>
-    <div class="navbar__links" id="navLinks">
-      <a href="#about">О тренере</a>
-      <a href="#guarantee">Гарантии</a>
-      <a href="#results">Результаты</a>
-      <a href="#faq">FAQ</a>
-      <button class="navbar__cta" onclick="location.href='https://usmanovafit.gymteam.ru/partnerregistration'">Выбрать программу</button>
-    </div>
-    <div class="navbar__burger" id="burger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -473,16 +426,6 @@
 </footer>
 
 <script>
-  // Navbar scroll
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // Burger menu
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
