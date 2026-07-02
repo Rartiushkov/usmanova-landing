@@ -198,6 +198,89 @@
     .support__link { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
     .support__link img { width: 40px; height: 40px; object-fit: contain; }
 
+    /* ── PROGRAMS ── */
+    .programs { background: #F3F3F3; padding: 45px 0; }
+    .programs__inner { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .programs__inner-mobile { max-width: 500px; margin: 0 auto; padding: 0 20px; }
+    .programs__box { background: #fff; border-radius: 30px; padding: 30px; }
+    .programs__title { font-size: clamp(20px,2.5vw,28px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 8px; }
+    .programs__subtitle { font-size: 16px; font-weight: 400; color: #555; text-align: center; margin-bottom: 24px; line-height: 1.4; }
+    /* Tabs */
+    .prog-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .prog-tab { padding: 8px 18px; border-radius: 100px; border: 1.5px solid #ddd; font-size: 14px; font-weight: 500; color: #888; cursor: pointer; background: none; font-family: inherit; transition: all .2s; }
+    .prog-tab:hover { border-color: #F66297; color: #F66297; }
+    .prog-tab.active { border-color: #F66297; background: #F66297; color: #fff; }
+    /* Grid */
+    .prog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
+    @media(max-width:1020px){ .prog-grid { grid-template-columns: 1fr; } }
+    .prog-card { border: 1.5px solid #ececec; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
+    .prog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.1); transform: translateY(-2px); }
+    .prog-card__img { height: 160px; background-size: cover; background-position: center; }
+    .prog-card__body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .prog-card__cat { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #F66297; }
+    .prog-card__name { font-size: 16px; font-weight: 600; color: #000; line-height: 1.25; }
+    .prog-card__desc { font-size: 13px; color: #777; line-height: 1.5; flex: 1; }
+    .prog-card__meta { display: flex; gap: 6px; flex-wrap: wrap; }
+    .prog-card__badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; background: #f5f5f5; color: #888; }
+    .prog-card__btn { display: block; margin-top: 10px; width: 100%; padding: 12px; background: #F66297; color: #fff; font-size: 14px; font-weight: 600; border-radius: 12px; text-align: center; border: none; cursor: pointer; font-family: inherit; letter-spacing: 1px; text-transform: uppercase; transition: background .2s; }
+    .prog-card__btn:hover { background: #e05580; }
+    /* Mobile: single column list */
+    @media(max-width:1020px){
+      .programs__desktop { display: none; }
+      .programs__mobile { display: block; }
+    }
+    @media(min-width:1021px){
+      .programs__desktop { display: block; }
+      .programs__mobile { display: none; }
+    }
+    .prog-mobile-card { background: #fff; border-radius: 20px; padding: 16px; margin-bottom: 12px; display: flex; gap: 14px; align-items: flex-start; border: 1.5px solid #ececec; }
+    .prog-mobile-card__img { width: 80px; height: 80px; border-radius: 12px; background-size: cover; background-position: center; flex-shrink: 0; }
+    .prog-mobile-card__body { flex: 1; }
+    .prog-mobile-card__name { font-size: 15px; font-weight: 600; color: #000; margin-bottom: 4px; }
+    .prog-mobile-card__desc { font-size: 13px; color: #777; line-height: 1.4; margin-bottom: 8px; }
+    .prog-mobile-card__btn { display: inline-block; padding: 8px 18px; background: #F66297; color: #fff; font-size: 13px; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: 1px; transition: background .2s; }
+    .prog-mobile-card__btn:hover { background: #e05580; }
+
+    /* ── FORM ── */
+    .form-section { background: #F3F3F3; padding: 45px 0; }
+    .form-section__inner { max-width: 500px; margin: 0 auto; padding: 0 20px; }
+    .form-box { background: #fff; border-radius: 30px; padding: 30px; }
+    .form-box__title { font-size: clamp(20px,2.5vw,26px); font-weight: 500; line-height: 1.3; text-align: center; margin-bottom: 8px; }
+    .form-box__title span { color: #F66297; }
+    .form-box__subtitle { font-size: 15px; color: #555; text-align: center; margin-bottom: 24px; line-height: 1.4; }
+    .lt-form { display: flex; flex-direction: column; gap: 12px; }
+    .f-input {
+      border: 1px solid #D6DBD6; border-radius: 8px; outline: none;
+      background: #fff; padding: 18px 20px;
+      font-weight: 500; font-size: 16px; color: #000;
+      transition: 0.3s all; height: 58px; width: 100%;
+      font-family: 'Gilroy','Inter',sans-serif;
+      box-sizing: border-box;
+    }
+    .f-input:focus { border-color: #FF2686; }
+    .f-input::placeholder { color: #8C8C8C; font-weight: 500; }
+    @media(max-width:640px){ .f-input { font-size: 18px; height: 60px; text-align: center; } }
+    .f-btn {
+      text-decoration: none; text-transform: uppercase; letter-spacing: 2px;
+      text-align: center; background-color: #F66297; color: #000;
+      font-size: 16px; line-height: 1.4; font-weight: 600;
+      border-radius: 100px; padding: 22px 40px; border: none;
+      cursor: pointer; transition: all 0.2s; width: 100%;
+      font-family: 'Gilroy','Inter',sans-serif; margin-top: 4px;
+    }
+    .f-btn:hover { background: #e05580; color: #fff; }
+    .f-btn:active { transform: translateY(2px); }
+    .form-note { font-size: 13px; color: #aaa; text-align: center; line-height: 1.5; margin-top: 4px; }
+    .form-note a { color: #F66297; }
+    .form-success { display: none; text-align: center; padding: 30px 0; }
+    .form-success__icon { font-size: 56px; margin-bottom: 12px; }
+    .form-success__title { font-size: 22px; font-weight: 600; color: #F66297; margin-bottom: 8px; }
+    .form-success__text { font-size: 15px; color: #555; }
+    .global-confirm-checkbox-block { display: flex; align-items: flex-start; gap: 10px; }
+    .global-confirm-checkbox-block input { margin-top: 3px; flex-shrink: 0; accent-color: #F66297; }
+    .global-confirm-checkbox-block .checkbox-text { color: #909090; font-size: 14px; line-height: 1.4; }
+    .global-confirm-checkbox-block .checkbox-text a { color: #d61355; text-decoration: underline; }
+
     /* ── FOOTER ── */
     footer { background: #F3F3F3; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
     .company-info { color: #878787; font-size: 14px; margin: 10px 0 20px; }
@@ -227,6 +310,59 @@
         alt="Катя Усманова"
         onerror="this.src='https://s.gymteam.ru/img/teach/metod/main5.jpg'"
       />
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS DESKTOP -->
+<section class="programs">
+  <div class="programs__desktop">
+    <div class="programs__inner">
+      <div class="programs__box">
+        <div class="programs__title">Программы Кати Усмановой</div>
+        <div class="programs__subtitle">Выберите направление и найдите свою программу</div>
+        <div class="prog-tabs" id="progTabs"></div>
+        <div class="prog-grid" id="progGrid"></div>
+      </div>
+    </div>
+  </div>
+  <!-- PROGRAMS MOBILE -->
+  <div class="programs__mobile">
+    <div class="programs__inner-mobile">
+      <div class="programs__box">
+        <div class="programs__title">Программы Кати Усмановой</div>
+        <div class="programs__subtitle">Выберите направление и найдите свою программу</div>
+        <div class="prog-tabs" id="progTabsMob"></div>
+        <div id="progListMob"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="form">
+  <div class="form-section__inner">
+    <div class="form-box">
+      <div id="formInner">
+        <div class="form-box__title">Выбрать <span>программу</span></div>
+        <div class="form-box__subtitle">Оставьте заявку — мы поможем подобрать программу под вашу цель и уровень</div>
+        <div class="lt-form">
+          <input class="f-input" type="text" id="fname" placeholder="Ваше имя" />
+          <input class="f-input" type="tel" id="fphone" placeholder="Номер телефона" />
+          <input class="f-input" type="email" id="femail" placeholder="Email" />
+          <div class="global-confirm-checkbox-block">
+            <input type="checkbox" id="fcheck" checked />
+            <span class="checkbox-text">Я принимаю условия <a href="https://usmanovafit.gymteam.ru/oferta_fitnes" target="_blank">оферты</a> и даю согласие на <a href="https://usmanovafit.gymteam.ru/personaldata" target="_blank">обработку персональных данных</a></span>
+          </div>
+          <button class="f-btn" onclick="submitForm()">Выбрать программу</button>
+          <div class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="https://usmanovafit.gymteam.ru/protection_fitnes" target="_blank">политикой конфиденциальности</a></div>
+        </div>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="form-success__icon">🎉</div>
+        <div class="form-success__title">Заявка принята!</div>
+        <div class="form-success__text">Мы свяжемся с вами в ближайшее время и поможем выбрать программу</div>
+      </div>
     </div>
   </div>
 </section>
@@ -426,6 +562,76 @@
 </footer>
 
 <script>
+const programs = [
+  { cat: 'Дома', icon: '🏠', name: 'Метод Усмановой', desc: 'Обновлённый метод: 20 тренировок с Катей, питание по неделям с меню и списком покупок. −3–5 кг и до 6 см с талии.', duration: '4 недели', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/metod/main5.jpg', url: 'https://usmanovafit.gymteam.ru/maysale2026_7' },
+  { cat: 'Дома', icon: '🏠', name: 'Марафон стройности 1.0', desc: 'Стройное тело за 21 день домашних тренировок без инвентаря и правильного питания.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/stroynost/r1920.jpg', url: 'https://gymteam.ru/trainings/marafon-stroinosti-1-0' },
+  { cat: 'Дома', icon: '🏠', name: 'Марафон стройности 2.0', desc: 'Стройность и рельеф за 21 день: домашние тренировки + рекомендации по питанию.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/stroynost2/str2.jpg', url: 'https://gymteam.ru/trainings/marafon-stroinosti-2-0' },
+  { cat: 'Дома', icon: '🏠', name: 'Убираем лишний жир', desc: 'Тренировки для дома и зала, план питания и техники антицеллюлитного массажа.', duration: '30 дней', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/ubiraem_lishnii_zhir/ulzh.jpg', url: 'https://gymteam.ru/trainings/kompleks-dlya-zhiroszhiganiya' },
+  { cat: 'Зал', icon: '🏋️', name: 'Курс для зала. Цикл №1', desc: 'Техника выполнения базовых упражнений. Старт в зале с нуля — правильно и без травм.', duration: '8 недель', level: 'Начинающий', img: 'https://s.gymteam.ru/img/teach/zal_1_c1/main2.jpg', url: 'https://gymteam.ru/trainings/kurs-dlya-zala-tehnika' },
+  { cat: 'Зал', icon: '🏋️', name: 'Идеальная попа 3.0', desc: '2 этапа: набор мышечной массы и «шлифовка» ягодиц. 5 тренировок в неделю + планы питания.', duration: '3 месяца', level: 'Hard', img: 'https://s.gymteam.ru/img/teach/idealpopa3/idealpopa3.jpg', url: 'https://gymteam.ru/trainings/idealnaya-popa-3' },
+  { cat: 'Зал', icon: '🏋️', name: 'Идеальная попа 2.0', desc: 'Программа на ягодицы для тех, кто уже знаком с тренировками в зале.', duration: '10 недель', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/idealpopa2/idealpopa2.jpg', url: 'https://gymteam.ru/trainings/idealnaya-popa-2-0-programma' },
+  { cat: 'После родов', icon: '👶', name: 'Фитнес-восстановление после родов', desc: 'Тренировки без вреда для лактации. 30 домашних тренировок, кабинет диетолога.', duration: '12 недель', level: 'Light', img: 'https://s.gymteam.ru/img/teach/fitnesabonement/fitnesabonement.jpg', url: 'https://usmanovateam.ru/poslerodov' },
+  { cat: 'Питание', icon: '🥗', name: 'Антицеллюлитный марафон', desc: 'Антистресс-программа: домашние тренировки, база знаний по питанию, массаж и лекции эндокринолога.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/Antiselulit/anticell.jpg', url: 'https://gymteam.ru/trainings/anticellulitny-marafon' },
+  { cat: 'Питание', icon: '🥗', name: 'Красивая и упругая попа 1.0', desc: '21 день ежедневных тренировок + рекомендации по питанию.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/popa1/popa1_cover.jpg', url: 'https://gymteam.ru/trainings/krasivaya-upugaya-popa' },
+  { cat: 'Любовь к себе', icon: '💖', name: 'Любовь к себе 2.0', desc: '8 лет психологических практик за 30 дней. Самооценка, избавление от страхов и вредных установок.', duration: '30 дней', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/idealpopa1/idealpopa1.jpg', url: 'https://usmanovateam.ru/love2.0' },
+];
+
+function renderPrograms(catFilter) {
+  const cats = ['Все', ...new Set(programs.map(p => p.cat))];
+  // Desktop tabs
+  const tabs = document.getElementById('progTabs');
+  if (tabs) {
+    tabs.innerHTML = cats.map(c => `<button class="prog-tab${c===catFilter?' active':''}" onclick="renderPrograms('${c}')">${c}</button>`).join('');
+  }
+  const grid = document.getElementById('progGrid');
+  if (grid) {
+    const filtered = catFilter==='Все' ? programs : programs.filter(p=>p.cat===catFilter);
+    grid.innerHTML = filtered.map(p => `
+      <div class="prog-card">
+        <div class="prog-card__img" style="background-image:url('${p.img}')"></div>
+        <div class="prog-card__body">
+          <div class="prog-card__cat">${p.icon} ${p.cat}</div>
+          <div class="prog-card__name">${p.name}</div>
+          <div class="prog-card__desc">${p.desc}</div>
+          <div class="prog-card__meta">
+            <span class="prog-card__badge">📅 ${p.duration}</span>
+            <span class="prog-card__badge">⚡ ${p.level}</span>
+          </div>
+          <a class="prog-card__btn" href="${p.url}" target="_blank">Подробнее</a>
+        </div>
+      </div>`).join('');
+  }
+  // Mobile tabs
+  const tabsMob = document.getElementById('progTabsMob');
+  if (tabsMob) {
+    tabsMob.innerHTML = cats.map(c => `<button class="prog-tab${c===catFilter?' active':''}" onclick="renderPrograms('${c}')">${c}</button>`).join('');
+  }
+  const listMob = document.getElementById('progListMob');
+  if (listMob) {
+    const filtered = catFilter==='Все' ? programs : programs.filter(p=>p.cat===catFilter);
+    listMob.innerHTML = filtered.map(p => `
+      <div class="prog-mobile-card">
+        <div class="prog-mobile-card__img" style="background-image:url('${p.img}')"></div>
+        <div class="prog-mobile-card__body">
+          <div class="prog-mobile-card__name">${p.name}</div>
+          <div class="prog-mobile-card__desc">${p.desc}</div>
+          <a class="prog-mobile-card__btn" href="${p.url}" target="_blank">Подробнее</a>
+        </div>
+      </div>`).join('');
+  }
+}
+renderPrograms('Все');
+
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const check = document.getElementById('fcheck').checked;
+  if (!name || !phone) { alert('Пожалуйста, заполните имя и телефон'); return; }
+  if (!check) { alert('Необходимо принять условия'); return; }
+  document.getElementById('formInner').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
