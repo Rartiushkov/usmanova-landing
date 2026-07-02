@@ -389,6 +389,15 @@
       background: rgba(255,255,255,.07);
       color: rgba(255,255,255,.6);
     }
+    .program-card__img {
+      width: calc(100% + 56px);
+      margin: -28px -28px 0 -28px;
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px 20px 0 0;
+      margin-bottom: 14px;
+    }
     .program-card__btn { margin-top: 6px; width: 100%; padding: 12px; font-size: 14px; border-radius: 12px; }
 
     /* ── GUARANTEE ── */
@@ -710,9 +719,10 @@
       <div class="hero__image-inner">
         <img
           class="hero__photo"
-          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=85&auto=format&fit=crop"
+          src="https://s.gymteam.ru/img/teach/metod/main5.jpg"
           alt="Катя Усманова — тренер"
           loading="eager"
+          onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=85&auto=format&fit=crop'"
         />
         <div class="hero__photo-gradient"></div>
         <div class="hero__badge-float">
@@ -734,8 +744,9 @@
       <div class="about__photo-wrap">
         <img
           class="about__photo"
-          src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=85&auto=format&fit=crop"
+          src="https://s.gymteam.ru/img/teach/idealpopa3/idealpopa3.jpg"
           alt="Катя Усманова чемпионка"
+          onerror="this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=85&auto=format&fit=crop'"
         />
         <div class="about__photo-badge">
           <span>580K+</span>
@@ -1007,39 +1018,40 @@ const programCategories = [
   {
     id: 'home', label: 'Тренировки дома', icon: '🏠', accent: '#d6a660',
     items: [
-      { name: 'Метод Усмановой', desc: 'Обновлённый метод: 20 тренировок с Катей, питание по неделям с меню и списком покупок. Типичный результат: −3–5 кг и до 6 см с талии.', duration: '4 недели', level: 'Для всех' },
-      { name: 'Марафон стройной фигуры 1.0', desc: 'Стройное тело за 21 день домашних тренировок без инвентаря и правильного питания с небольшим дефицитом калорий.', duration: '21 день', level: 'Light' },
-      { name: 'Марафон стройной фигуры 2.0', desc: 'Стройность и рельеф за 21 день: домашние тренировки + рекомендации по питанию на похудение или набор массы.', duration: '21 день', level: 'Middle' },
-      { name: 'Марафон плоского живота', desc: '21 день ежедневных тренировок для проработки мышц пресса. В марафон включены рекомендации по питанию по методу БУЧ.', duration: '21 день', level: 'Light' },
-      { name: 'Марафон красивой и упругой попы 1.0', desc: '21 день ежедневных тренировок в формате «повторяй за мной» + рекомендации по питанию. Цель: изменить форму и объем ягодиц.', duration: '21 день', level: 'Middle' },
-      { name: 'Убираем лишний жир за 30 дней', desc: 'Тренировки для дома и зала, план питания и техники антицеллюлитного массажа. Цель: подтянутое тело с эффектом липосакции.', duration: '30 дней', level: 'Middle' },
+      { name: 'Метод Усмановой', desc: 'Обновлённый метод: 20 тренировок с Катей, питание по неделям с меню и списком покупок. Типичный результат: −3–5 кг и до 6 см с талии.', duration: '4 недели', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/metod/main5.jpg' },
+      { name: 'Марафон стройности 1.0', desc: 'Стройное тело за 21 день домашних тренировок без инвентаря и правильного питания с небольшим дефицитом калорий.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/stroynost/r1920.jpg' },
+      { name: 'Марафон стройности 2.0', desc: 'Стройность и рельеф за 21 день: домашние тренировки + рекомендации по питанию на похудение или набор массы.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/stroynost2/str2.jpg' },
+      { name: 'Убираем лишний жир', desc: 'Тренировки для дома и зала, план питания и техники антицеллюлитного массажа. Цель: подтянутое тело с эффектом липосакции.', duration: '30 дней', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/ubiraem_lishnii_zhir/ulzh.jpg' },
+      { name: 'Жиросжигающий курс', desc: 'Три уровня: умеренный, интенсивный и силовой. Каждый по 45 дней. Идёте по своему темпу.', duration: '45 дней', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/zhiroshig/zhiroshig.jpg' },
+      { name: 'Интенсив по похудению', desc: 'Быстрое похудение без диет — только тренировки и грамотный план питания.', duration: '4 недели', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/intensiv_pohudenie/ip_cover.jpg' },
     ],
   },
   {
     id: 'gym', label: 'Тренировки в зале', icon: '🏋️', accent: '#8b5cf6',
     items: [
-      { name: 'Курс идеальной попы 3.0', desc: 'Создаём идеальную попу в 2 этапа: набор мышечной массы и «шлифовка» ягодиц до совершенства. 5 тренировок в неделю + планы питания.', duration: '3 месяца', level: 'Hard' },
-      { name: 'Набор формы в зале', desc: 'Работа с весами для красивой женской фигуры. Прогрессивная нагрузка, техника выполнения каждого упражнения.', duration: '10 недель', level: 'Middle' },
+      { name: 'Курс для зала. Цикл №1', desc: 'Техника выполнения базовых упражнений. Старт в зале с нуля — правильно и без травм.', duration: '8 недель', level: 'Начинающий', img: 'https://s.gymteam.ru/img/teach/zal_1_c1/main2.jpg' },
+      { name: 'Идеальная попа 3.0', desc: 'Создаём идеальную попу в 2 этапа: набор мышечной массы и «шлифовка» ягодиц до совершенства. 5 тренировок в неделю + планы питания.', duration: '3 месяца', level: 'Hard', img: 'https://s.gymteam.ru/img/teach/idealpopa3/idealpopa3.jpg' },
+      { name: 'Идеальная попа 2.0', desc: 'Программа на ягодицы для тех, кто уже знаком с тренировками в зале.', duration: '10 недель', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/idealpopa2/idealpopa2.jpg' },
     ],
   },
   {
     id: 'postnatal', label: 'Беременность и после родов', icon: '👶', accent: '#ec4899',
     items: [
-      { name: 'Фитнес-восстановление после родов', desc: 'Тренировки без вреда для лактации. Цель: избавиться от лишнего веса и улучшить тонус мышц. 30 домашних тренировок, кабинет диетолога, рекомендации по питанию на ГВ.', duration: '12 недель', level: 'Light' },
-      { name: 'Тренировки при беременности', desc: 'Безопасные упражнения для будущих мам на каждом триместре. Сохраняет тонус и облегчает роды.', duration: 'Все 9 месяцев', level: 'Light' },
+      { name: 'Фитнес-восстановление после родов', desc: 'Тренировки без вреда для лактации. Цель: избавиться от лишнего веса и улучшить тонус мышц. 30 домашних тренировок, кабинет диетолога, рекомендации по питанию на ГВ.', duration: '12 недель', level: 'Light', img: 'https://s.gymteam.ru/img/teach/fitnesabonement/fitnesabonement.jpg' },
+      { name: 'Тренировки при беременности', desc: 'Безопасные упражнения для будущих мам на каждом триместре. Сохраняет тонус и облегчает роды.', duration: 'Все 9 месяцев', level: 'Light', img: 'https://s.gymteam.ru/img/teach/univ_yagodici/main1.jpg' },
     ],
   },
   {
     id: 'nutrition', label: 'Питание', icon: '🥗', accent: '#22c55e',
     items: [
-      { name: 'Курс питания', desc: 'Курс, который полностью заменит диетолога. Цель: научиться составлять рацион питания, избавиться от диетического мышления, похудеть и стать энергичнее.', duration: 'Бессрочно', level: 'Для всех' },
-      { name: 'Антицеллюлитный марафон', desc: 'Антистресс-программа для ровной и гладкой кожи: домашние тренировки, база знаний по питанию, массаж и лекции эндокринолога.', duration: '21 день', level: 'Light' },
+      { name: 'Антицеллюлитный марафон', desc: 'Антистресс-программа для ровной и гладкой кожи: домашние тренировки, база знаний по питанию, массаж и лекции эндокринолога.', duration: '21 день', level: 'Light', img: 'https://s.gymteam.ru/img/teach/Antiselulit/anticell.jpg' },
+      { name: 'Красивая и упругая попа 1.0', desc: '21 день ежедневных тренировок в формате «повторяй за мной» + рекомендации по питанию.', duration: '21 день', level: 'Middle', img: 'https://s.gymteam.ru/img/teach/popa1/popa1_cover.jpg' },
     ],
   },
   {
     id: 'love', label: 'Любовь к себе', icon: '💖', accent: '#f472b6',
     items: [
-      { name: 'Любовь к себе 2.0', desc: '8 лет психологических практик, упакованных в 30 дней. Работаем над самооценкой, разбираемся в психологических причинах переедания, избавляемся от страхов и вредных установок.', duration: '30 дней', level: 'Для всех' },
+      { name: 'Любовь к себе 2.0', desc: '8 лет психологических практик, упакованных в 30 дней. Работаем над самооценкой, разбираемся в психологических причинах переедания, избавляемся от страхов и вредных установок.', duration: '30 дней', level: 'Для всех', img: 'https://s.gymteam.ru/img/teach/idealpopa1/idealpopa1.jpg' },
     ],
   },
 ];
@@ -1073,6 +1085,7 @@ function buildPrograms(idx) {
   const grid = document.getElementById('programsGrid');
   grid.innerHTML = cat.items.map(p => `
     <div class="program-card" style="--accent:${cat.accent}">
+      ${p.img ? `<div class="program-card__img" style="background-image:url('${p.img}')"></div>` : ''}
       <div class="program-card__cat">${cat.icon} ${cat.label}</div>
       <div class="program-card__name">${p.name}</div>
       <div class="program-card__desc">${p.desc}</div>
