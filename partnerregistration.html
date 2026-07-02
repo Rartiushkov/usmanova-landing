@@ -1,54 +1,960 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Регистрация амбассадора</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="simple-page">
-  <main class="signup-screen">
-    <section class="signup-copy">
-      <button class="plain-link" data-go="home" type="button">На главную</button>
-      <h1>Условия программы для амбассадоров</h1>
-      <p>Краткое описание программы: преимущества, правила участия и промокод для старта.</p>
-      <div class="terms-card">
-        <h2>Оферта</h2>
-        <p>После регистрации партнёрский код придёт на почту. Заполните форму теми контактами, которыми будете пользоваться дальше.</p>
-      </div>
-    </section>
 
-    <section class="form-card">
-      <h2>Зарегистрируйтесь, чтобы получить промокод амбассадора</h2>
-      <form class="lead-form" data-form="ambassador">
-        <label>
-          <span>Эл. адрес</span>
-          <input type="email" name="email" placeholder="Введите ваш эл. адрес" required>
-        </label>
-        <label>
-          <span>Имя</span>
-          <input type="text" name="name" placeholder="Введите ваше имя" required>
-        </label>
-        <label>
-          <span>Телефон</span>
-          <input type="tel" name="phone" placeholder="Введите ваш телефон" required>
-        </label>
-        <input type="hidden" name="tgid">
-        <input type="hidden" name="ambassid">
-        <button class="button" type="submit">Получить промокод</button>
-        <p class="form-status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
+<!DOCTYPE html>
+  <head>
+    
+<script>
+	window.accountUserId = -1;
+	window.requestIp = "87.249.138.157";
+	window.isSublogined = false;
+	window.accountId = 934144;
+	window.gcSessionId = 0;
+	window.controllerId = "page";
+	window.actionId = "0";
+	window.nowTime = new Date(2026, 6, 02, 17, 58, 54);
+	window.dateOffset = 3;
+	window.userInfo = {"isAdmin":false,"isManager":false,"isInAccount":false,"isTeacher":false,"canCms":false,"canEditHelp":false,"canViewTasksBlock":false,"isHumanDesign":"0"};
+	window.currencyLabels = {"RUB":"RUB","USD":"USD","EUR":"EUR","GBP":"GBP","BYR":"BYR","BYN":"BYN","KZT":"KZT","UAH":"UAH","AUD":"AUD","DKK":"DKK","CHF":"CHF","SEK":"SEK","ZAR":"ZAR","AMD":"AMD","RON":"RON","BRL":"BRL","ILS":"ILS","MYR":"MYR","SGD":"SGD","KGS":"KGS","CAD":"CAD","MXN":"MXN","JPY":"JPY","UZS":"UZS","PLN":"PLN","AZN":"AZN","AED":"AED","TRY":"TRY","INR":"INR","RSD":"RSD","CZK":"CZK","MNT":"MNT","NZD":"NZD","BGN":"BGN","IDR":"IDR","CNY":"CNY","GEL":"GEL","COP":"COP","ARS":"ARS","PEN":"PEN","CLP":"CLP","VND":"VND","PHP":"PHP","DOP":"DOP","KRW":"KRW","TWD":"TWD","MDL":"MDL","TJS":"TJS","NOK":"NOK","NGN":"NGN","HKD":"HKD","POINTS":""};
+window.accountSafeUserName = "Guest";
+window.accountUserThumbnail = "<img class=\"user-profile-image user-default-profile-image\" src=\"\/public\/img\/default_profile_50.png\" width=\"50\" alt=\"\">";
+window.language = "ru";
+window.csrfToken = "Sec-OWnVk6iBz5ZSj4ir_ShnUCQvgVwQnYDjuNHYdhJxiEZAHOLSzvWM5WW6zOqnWRMDZkDVLHnr9LeV5OAYdw==";
+window.requestTime = 1783004334;
+window.requestSimpleSign = "2059c418ab6d9323fb46008faa955291";
+window.gcUniqId = "12530697926a467cae649bd7.19655869.1783004334.4121";
+window.mailingVisibility = 0;
+window.isSupportChatEnabled = false;
+window.disableCaptchaForConfirmPhone = false;
+window.allowRevealPassword = false;
+window.isDisabledConvertIndexToSimple = false;
+window.params_52 = 0;
+window.gcsObjectId = 4590415;
+window.isSessionLocalStorageEnabled = true;
+window.isWhatsappIconEnabled = false;
+window.file_upload_blocking = false;
+window.storage_usage_percent = null;
+window.used_storage_size = null;
+window.max_storage_size = null;
+window.fileserviceThumbnailHost = "fs-thb01.getcourse.ru";
+window.fileserviceMainHost = "fs02.getcourse.ru";
+window.fileserviceUploadHost = "fs26.getcourse.ru";
+window.fileserviceTusFeatureEnabled = true;
+window.iCanSelectGridOffset = true;
+window.webinarUsePlayer15 = false;
+window.isEnabledSecureUpload = 1;
+window.webinarWebsocketHosts = ["ws11.getcourse.ru","stream01.gcfiles.net"];
+window.webinarWebsocketPath = "\/ws2\/webinar";
+window.webSocketHost = "ws04.getcourse.ru";
+window.fdsrevEnabled12 = true;
+window.isDisabledFacebook = true;
+window.metaIsAnExtremismOrganizationText = "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f Meta \u043f\u0440\u0438\u0437\u043d\u0430\u043d\u0430 \u044d\u043a\u0441\u0442\u0440\u0435\u043c\u0438\u0441\u0442\u0441\u043a\u043e\u0439 \u0432 \u0420\u0424.";
+window.isTestingV2 = false;
+window.testingV2VersionCheck = false;
+window.isDisabledVK = false;
+window.isEnableForeignAuthMethods = false;
+window.autoGenerateSubtitlesSectionEnabled = true;
+window.internalDomains = ["usmanovafit.gymteam.ru","usmanovafit.getcourse.ru"];
+window.vhApiHost = "vh-api-1-de.gceuproxy.com";
+window.vhsRegion = "eu";
+window.videoLinkFeatureUsed = 0;
+window.helpdeskEnabledFeature = false;
+window.helpdeskTalksEnabledFeature = false;
+window.enabledTariffsPage = true;
+window.tgButtonColorsEnabledFeature = true;
+window.relatedUsersOnActiveBlock = true;
+window.UShort = "Wy0xXQ.GxRucEexSTvGUJrV9zi7BbHglECa4RM1Y-9Y1BjNqoo";
+window.ULong = "Wy0xXQ.GxRucEexSTvGUJrV9zi7BbHglECa4RM1Y-9Y1BjNqoo";
+window.gcRedesign = {"isLessonRedesignEnabled":false};
+window.attachContactToUserUpdateFeature = false;
+window.enableRuleCopyToClipboardFeature = true;
+window.ShowFaceBookDisclaimerFeature = true;
+window.proMode = true;
+window.proModeUser = true;
+window.maxEnabledFeature = true;
+window.gcAccountMenuBadges = {"showQualityMark":false,"qualityMarkHref":"","showTopOnePercent":false,"topOneHref":""};
+window.canFileStorage = false;
+</script>
 
-  <div class="cookie" data-cookie>
-    <p>Мы используем cookie-файлы. Это нужно для лучшей работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.</p>
-    <button class="button button--tiny" data-cookie-ok>OK</button>
-  </div>
+				<link rel="shortcut icon"
+			  href="https://fs.getcourse.ru/fileservice/file/download/a/934144/sc/240/h/fb783df3c47bb9bdf8432ac158d24131.png">
+	
+	<link href="https://usmanovafit.gymteam.ru/nassets/82b491ed/glyphicons.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/3288556b/css/reveal-password.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/css/superlite-block-3b3d45c8c82d97c135d0a114931a83b4.css?v=1783000578" rel="stylesheet" async="async">
+<link href="https://usmanovafit.gymteam.ru/public/fonts/gfonts/open-sans/open-sans-cyr-swap.css" rel="stylesheet" async="async">
+<link href="https://usmanovafit.gymteam.ru/public/fonts/gfonts/roboto/roboto-cyr-swap.css" rel="stylesheet" async="async">
+<link href="https://usmanovafit.gymteam.ru/nassets/de470cdd/css/all.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/de470cdd/css/v5-font-face.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/de470cdd/css/v4-font-face.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/de470cdd/css/v4-shims.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/de470cdd/css/old.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/79a2fae1/css/button.css?v=1765633901" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/e18c7588/proxima.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/4b8ca1d0/themes/smoothness/jquery-ui.css?v=1765633902" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/d40f6009/deps/css/bootstrap-modal.min.css?v=1765633901" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/d40f6009/css/blocks-modal.css?v=1765633901" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/d40f6009/deps/css/bootstrap-table.min.css?v=1765633901" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/e6953c0c/css/modal.css?v=1765633900" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/9f614c7f/notice.css?v=1765633899" rel="stylesheet">
+<link href="https://usmanovafit.gymteam.ru/nassets/86fb0827/css/als-granate-vf-new.css?v=1777450802" rel="stylesheet">
+<script src="https://usmanovafit.gymteam.ru/nassets/2b98cd16/jquery.min.js?v=1765633902"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/b9c49911/js/global-function.js?v=1779966196"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/3288556b/js/reveal-password.js?v=1765633899"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/34e59808/js/JsTrans.min.js?v=1765633900"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/85e282e9/dictionary-gen-40bb82be44a1d563393829cbed02aa5c5dd8f14e.js?v=1782997200"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/85e282e9/dictionary-gen-53b2006c21efcdc033102de4e8254436791bf3ed.js?v=1782997200"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/4b8ca1d0/jquery-ui.min.js?v=1765633902"></script>
+<script>window.globalCheckboxEnabled=false
+window.persodataConfirm=false
+window.globalCheckboxForPaidOnly=false
+window.globalCheckboxText="\u042f \u0441\u043e\u0433\u043b\u0430\u0441\u0435\u043d \u0441 \u0443\u0441\u043b\u043e\u0432\u0438\u044f\u043c\u0438&nbsp;<a href=\"\/legal\" target=\"_blank\">\u041e\u0444\u0435\u0440\u0442\u044b<\/a>"
+window.pdpCheckboxEnabled=false
+window.pdpConfirmedByDefault=false
+window.pdpCheckboxText="\u042f \u0441\u043e\u0433\u043b\u0430\u0441\u0435\u043d \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443 \u043c\u043e\u0438\u0445 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445. \u0421&nbsp;<a href=\"\/privacypolicy\" target=\"_blank\">\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u043e\u0439 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0438 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445<\/a>&nbsp;\u043e\u0437\u043d\u0430\u043a\u043e\u043c\u043b\u0435\u043d."
+window.checkboxMailingEnabled=true
+window.checkboxMailingChecked=true
+window.checkboxMailingForPaidOnly=false
+window.checkboxMailingText="\u042f \u0441\u043e\u0433\u043b\u0430\u0441\u043d\u0430 \u043d\u0430 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u0438 \u043c\u0430\u0440\u043a\u0435\u0442\u0438\u043d\u0433\u043e\u0432\u044b\u0445 \u0440\u0430\u0441\u0441\u044b\u043b\u043e\u043a (\u0432\u044b \u0432 \u043b\u044e\u0431\u043e\u0439 \u043c\u043e\u043c\u0435\u043d\u0442 \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f \u043e\u0442 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044f \u043f\u0438\u0441\u0435\u043c \u0432 \u043b\u0438\u0447\u043d\u043e\u043c \u043a\u0430\u0431\u0438\u043d\u0435\u0442\u0435)"
+window.isMailingCheckboxRequired=false
+window.isMailingCheckboxRequiredForNotPaid=false
+window.isLegalReworkFeatureEnabled=true</script>        <title></title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="script.js"></script>
+    <meta property="og:title" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="description" content=""/>
+
+	
+	    <meta property="og:url" content="partnerregistration.html"/>
+    <meta property="fb:app_id" content="1437814016454992"/>
+
+			
+	
+	
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106868527', 'ym');
+
+    ym(106868527, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106868527" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+												  </head>
+		<body class="gc-user-guest">
+	
+        
+		    <div class="gc-main-content gc-both-main-content no-menu  front-page-content gc-user-guest">
+      
+
+<div class="lite-page block-set">
+
+	
+			
+
+<style>
+	#ltBlock2232817099 .lt-block-wrapper {
+		padding-top: 0px; padding-bottom: 0px	}
+
+			
+			</style>
+
+
+<div id="ltBlock2232817099" data-block-id="2232817118"
+               class="lt-block lt-view raw-js lt-raw lt-raw-js lt-system-block lt-invisible-block"
+     data-code="b-482bd"
+          >
+	<div class="lt-block-wrapper">
+	
+	<script language="javascript" id="rawJs2395496">
+		function getGet(name) {
+
+   var s = window.location.search;
+   s = s.match(new RegExp(name + '=([^&=]+)'));
+   return s ? decodeURI(s[1]) : false;
+}
+
+$(function(){
+  $('[id="field-input-13765328"]').val(getGet("tgid")); 
+  $('[id="field-input-13765252"]').val(getGet("ambassid")); 
+});
+	</script>
+
+
+</div></div>
+
+
+
+			
+
+<style>
+	#ltBlock2232812369 .lt-block-wrapper {
+		padding-top: 60px; padding-bottom: 15px	}
+
+			
+			</style>
+
+
+<div id="ltBlock2232812369" data-block-id="2232812570"
+               class="lt-block lt-view bld01 lt-onecolumn lt-onecolumn-common"
+     data-code="b-18d52"
+          >
+	<div class="lt-block-wrapper">
+	<div class="container">
+	<div class="row">
+		<div class="modal-block-content block-box col-md-8 col-md-offset-2 text-left" style="">
+			<div
+	id="builder8515868"
+	class="builder  animated-block"
+	data-path="items"
+	data-animation-order="in-turn">
+	
+			<div
+	data-param="items/parts/header1"
+	data-item-name="header1"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-header  text-center"
+	id="ae23268e38"
+>
+	<div data-editable=true data-param='items/parts/header1/inner/text' class='f-header f-header-36 f-text-transform-Вид текста'><p>Условия программы для амбассадоров</p></div>	<div class="add-redesign-subblock" data-id="2232812570">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#ae23268e38 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="items/parts/text1"
+	data-item-name="text1"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-text  text-center"
+	id="a81573339e"
+>
+	<div style='' class='text-normal f-text' data-param='items/parts/text1/inner/text' data-editable='true'><p>Краткое описание программы (преимущества, правила и тд)</p></div>	<div class="add-redesign-subblock" data-id="2232812570">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a81573339e .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+	</div>
+
+
+
+
+
+<script>
+	$( function() {
+
+		if( $('#builder8515868 input[type="radio"]').length == 1 && $('#builder8515868 input[type="radio"]').prop('checked') ) {
+			$('#builder8515868 input[type="radio"]').hide();
+		}
+
+		if ($('.animated-block').animatedBlock) {
+            $('.animated-block').animatedBlock();
+		}
+	} );
+</script>
+		</div>
+	</div>
+</div>
+
+</div></div>
+
+
+
+			
+
+<style>
+	#ltBlock2232812372 .lt-block-wrapper {
+		padding-top: 45px; padding-bottom: 45px	}
+
+			
+			</style>
+
+
+<div id="ltBlock2232812372" data-block-id="2232812573"
+               class="lt-block lt-view bld01 lt-onecolumn lt-onecolumn-common"
+     data-code="b-d1d0c"
+          >
+	<div class="lt-block-wrapper">
+	<div class="container">
+	<div class="row">
+		<div class="modal-block-content block-box col-md-8 col-md-offset-2 text-left" style="">
+			<div
+	id="builder7918535"
+	class="builder  animated-block"
+	data-path="items"
+	data-animation-order="in-turn">
+	
+			<div
+	data-param="items/parts/field84483"
+	data-item-name="field84483"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-text  text-center"
+	id="ab65bb2243"
+>
+	<div style='' class='text-normal f-text' data-param='items/parts/field84483/inner/text' data-editable='true'><p>Оферта</p></div>	<div class="add-redesign-subblock" data-id="2232812573">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#ab65bb2243 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+	</div>
+
+
+
+
+
+<script>
+	$( function() {
+
+		if( $('#builder7918535 input[type="radio"]').length == 1 && $('#builder7918535 input[type="radio"]').prop('checked') ) {
+			$('#builder7918535 input[type="radio"]').hide();
+		}
+
+		if ($('.animated-block').animatedBlock) {
+            $('.animated-block').animatedBlock();
+		}
+	} );
+</script>
+		</div>
+	</div>
+</div>
+
+</div></div>
+
+
+
+			
+
+<style>
+	#ltBlock2232812370 .lt-block-wrapper {
+		padding-top: 75px; padding-bottom: 75px	}
+
+			
+			</style>
+
+
+<div id="ltBlock2232812370" data-block-id="2232812571"
+          data-has-limited-visibility="true"     class="lt-block lt-view form02 lt-form lt-form-normal"
+     data-code="b-0f6e0"
+          >
+	<div class="lt-block-wrapper">
+	<div class="container">
+	<div class="row">
+		<div class="modal-block-content block-box col-md-8 col-md-offset-2" style="">
+			
+<form
+	id="ltForm9831020"
+	class="
+		lt-normal-form
+		lt-form-inner
+		lt-form
+							"
+	data-id = 2232812571	action="#"
+	method="post"
+	data-open-new-window="0"
+	data-sequential-request="1"
+	>
+	<input type="hidden" name="formParams[setted_offer_id]" class="external-value offer_id">
+	<input type="hidden" name="formParams[willCreatePaidDeal]" value="0">
+				<input type="hidden"
+			   name="__gc__internal__form__helper" value="partnerregistration.html">
+		<input type="hidden"
+			   name="__gc__internal__form__helper_ref" value="">
+			
+			<div class="form-result-block"></div>
+	
+	<div class="form-content">
+		<div
+	id="builder1185789"
+	class="builder "
+	data-path="form/items"
+	>
+	
+			<div
+	data-param="form/items/parts/header1"
+	data-item-name="header1"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-header  text-center"
+	id="a269e428c7"
+>
+	<div data-editable=true data-param='form/items/parts/header1/inner/text' class='f-header f-header-36'><p>Зарегистрируйтесь, чтобы получить промокод амбассадора</p></div>	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a269e428c7 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/emailField"
+	data-item-name="emailField"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-userField "
+	id="a3024d5cee"
+>
+	<div id="fieldStandard5987093" data-hide-filled="0"
+	>
+	
+	<div class="field-content" >
+		
+				<input type="text" maxlength="60" class="f-input" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="">
+		</div>
+</div>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a3024d5cee .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/nameField"
+	data-item-name="nameField"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-userField "
+	id="a38dbefc64"
+>
+	<div id="fieldStandard3911294" data-hide-filled="0"
+	>
+	
+	<div class="field-content" >
+		
+				<input type="text" maxlength="60" class="f-input" placeholder="Введите ваше имя" name="formParams[full_name]" value="">
+		</div>
+</div>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a38dbefc64 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/phoneField"
+	data-item-name="phoneField"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-userField "
+	id="a0a3419097"
+>
+	<div id="fieldStandard3205583" data-hide-filled="0"
+	>
+	
+	<div class="field-content" >
+		
+			    <input type="text" class="f-input" name="formParams[phone]" maxlength="60" placeholder="Введите ваш телефон">    	</div>
+</div>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a0a3419097 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/submitButton"
+	data-item-name="submitButton"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-button  text-center"
+	id="acf049b10b"
+>
+	
+
+<button type="submit"
+		id="button9493018" data-btn-locked disabled="disabled"		class="btn f-btn  button-md btn-success"
+		style="color: white; background-color: ; ">
+
+			Получить промокод	</button>
+
+<script>
+$( function() {
+	var disableButton = function (e) {
+		if (window['prsbutton9493018']) {
+			e.preventDefault();
+			return false;
+		} else {
+			$('#button9493018').addClass('disabled');
+			window['prsbutton9493018'] = true;
+			setTimeout(function(){window['prsbutton9493018'] = false;$('#button9493018').removeClass('disabled');}, 6000);
+		}
+		return true;
+	};
+	$( '#button9493018' ).click( function(e) {
+		//disableButton(e);
+			} );
+});
+</script>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#acf049b10b .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/field22191"
+	data-item-name="field22191"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-text "
+	id="a2cd7031ad"
+>
+	<div style='' class='text-normal f-text' data-param='form/items/parts/field22191/inner/text' data-editable='true'><p>Ваш партнёрский код придёт вам на почту в течение 10 минут после заполнения формы.</p></div>	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a2cd7031ad .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/field87640"
+	data-item-name="field87640"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-userField  hide"
+	id="a2a2551652"
+>
+	<div id="fieldStandard9436362" data-hide-filled="0"
+	>
+	
+	<div class="field-content" >
+		
+						<div
+		id="fieldWidget9408069"
+		class="f-input-wrapper"
+		data-element="custom-field"
+		data-id="13765252"
+		data-title="ambassador_id"
+		data-type="string"
+	>
+						<div class="custom-field type-string">
+				<div class="custom-field-input">
+											<label class="field-label">
+							<span class="label-value">
+								ambassid							</span>
+													</label>
+										<div class="field-input-block">
+<input id="field-input-13765252" type="text" class="form-control f-input custom-field-value" name="formParams[userCustomFields][13765252]" placeholder="" value=""/></div>
+											<div class="field-description-block">ID амбассадора в базе участников амбассадорской программы</div>
+									</div>
+			</div>
+			</div>
+	</div>
+</div>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a2a2551652 .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+			<div
+	data-param="form/items/parts/field94241"
+	data-item-name="field94241"
+	data-title="Элемент"
+	data-animation-mode="no"
+	style="margin-bottom: 25px; border-radius: ; "
+	data-setting-editable="true"
+	class="builder-item part-userField  hide"
+	id="a428c209ab"
+>
+	<div id="fieldStandard6715260" data-hide-filled="0"
+	>
+	
+	<div class="field-content" >
+		
+						<div
+		id="fieldWidget5418551"
+		class="f-input-wrapper"
+		data-element="custom-field"
+		data-id="13765328"
+		data-title="tg_id"
+		data-type="string"
+	>
+						<div class="custom-field type-string">
+				<div class="custom-field-input">
+											<label class="field-label">
+							<span class="label-value">
+								telegram_id							</span>
+													</label>
+										<div class="field-input-block">
+<input id="field-input-13765328" type="text" class="form-control f-input custom-field-value" name="formParams[userCustomFields][13765328]" placeholder="" value=""/></div>
+											<div class="field-description-block">ID Телеграм</div>
+									</div>
+			</div>
+			</div>
+	</div>
+</div>
+	<div class="add-redesign-subblock" data-id="2232812571">
+		<span class="fa fa-plus"></span>
+	</div>
+</div>
+<style>
+		.add-redesign-subblock,
+	div#a428c209ab .add-redesign-subblock
+	{
+		display: none;
+	}
+</style>
+	</div>
+
+
+
+
+
+<script>
+	$( function() {
+
+		if( $('#builder1185789 input[type="radio"]').length == 1 && $('#builder1185789 input[type="radio"]').prop('checked') ) {
+			$('#builder1185789 input[type="radio"]').hide();
+		}
+
+		if ($('.animated-block').animatedBlock) {
+            $('.animated-block').animatedBlock();
+		}
+	} );
+</script>
+	</div>
+
+	<div class="common-setting-link box-setting-link" data-icon-class="fa fa-adjust" data-param="form/formBox" data-title="Стиль блока" data-setting-editable="true"></div>
+	<div class="common-setting-link form-setting-link"
+         data-icon-class="fa fa-wpforms"
+         data-param="form/handler"
+         data-title="Что делать после заполнения"
+         data-setting-editable="true"
+    ></div>
+</form>
+<script>
+	$( function() {
+		$('#ltForm9831020').liteForm();
+	} );
+</script>
+
+
+
+	<style>
+		#ltForm9831020 {
+		;		}
+	</style>
+
+		</div>
+	</div>
+</div>
+
+</div></div>
+
+
+
+				
+	
+
+</div>
+
+
+
+
+
+
+<style>
+						.gc-account-leftbar, .talks-widget-window, .page-edit-link, .create-link-link {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	}
+</style>
+    </div>
+    				
+<div class="notice-widget" id="noticeWidget"></div>
+<script>
+	$( function() {
+		if ($('#noticeWidget')?.noticeWidget) {
+			$('#noticeWidget').noticeWidget();
+
+					}
+	} );
+</script>
+		
+<div class="cookies-notification ">
+	<div class="cookies-notification__content">
+		<div class="cookies-notification__content__text">
+							Мы используем cookie-файлы. Это нужно для лучшей работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.								</div>
+		<div class="cookies-notification__actions">
+			<button class="cookies-notification__actions__button js__accept_cookies_policy">
+				Ok			</button>
+		</div>
+	</div>
+</div>
+<script>
+(function () {
+	const buttonSelector = '.js__accept_cookies_policy';
+
+	const hideBannerJq = function () {
+		if (!window.jQuery) {
+			return;
+		}
+		window.jQuery('.cookies-notification').fadeOut(500, function () {
+			window.jQuery(this).remove();
+		});
+	};
+
+	const hideBannerNative = function () {
+		const banner = document.querySelector('.cookies-notification');
+		if (!banner) {
+			return;
+		}
+		banner.style.transition = 'opacity 0.5s ease';
+		banner.style.opacity = '0';
+		window.setTimeout(function () {
+			if (banner.parentNode) {
+				banner.parentNode.removeChild(banner);
+			}
+		}, 500);
+	};
+
+	const getPostData = function () {
+		const csrfParamMeta = document.querySelector('meta[name="csrf-param"]');
+		const csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
+		const csrfParam = csrfParamMeta ? csrfParamMeta.getAttribute('content') : null;
+		const csrfToken = csrfTokenMeta ? csrfTokenMeta.getAttribute('content') : null;
+
+		const postData = {accept: '1'};
+		if (csrfParam && csrfToken) {
+			postData[csrfParam] = csrfToken;
+		}
+
+		return postData;
+	};
+
+	const acceptCookies = function () {
+		if (window.jQuery && window.jQuery.post) {
+			window.jQuery.post('/pl/saas/accept-policy', getPostData())
+				.then(function (data) {
+					if (data && data.success) {
+						hideBannerJq();
+					}
+				}, function () {});
+			return;
+		}
+
+		const body = new URLSearchParams(getPostData());
+		fetch('/pl/saas/accept-policy', {
+			method: 'POST',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+				'X-Requested-With': 'XMLHttpRequest'
+			},
+			body: body.toString()
+		})
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				if (data && data.success) {
+					hideBannerNative();
+				}
+			})
+			.catch(function () {});
+	};
+
+	document.addEventListener('click', function (e) {
+		const button = e.target && e.target.closest ? e.target.closest(buttonSelector) : null;
+		if (!button) {
+			return;
+		}
+
+		if (button.dataset.gcCookiesAccept === '1') {
+			return;
+		}
+		button.dataset.gcCookiesAccept = '1';
+
+		acceptCookies();
+	});
+})();
+</script>
+<style>
+	.cookies-notification,
+	.cookies-notification__content__link,
+	.cookies-notification__content__link:hover {
+		font-size: 14px;
+		font-family: "ALS Granate VF", sans-serif;
+		font-weight: 400;
+		line-height: 146%;
+        font-style: normal;
+	}
+	.cookies-notification {
+		color: #000000;
+	}
+	.cookies-notification__content__link{
+		color: #00b881;
+		text-decoration: none;
+        font-style: normal;
+	}
+	.cookies-notification__content__link:hover {
+		color: #00a674;
+		text-decoration: none;
+        font-style: normal;
+	}
+	.cookies-notification {
+		position: fixed;
+		bottom: 75px;
+		left: 15px;
+		right: 15px;
+		width: calc(100% - 30px);
+		border-radius: 16px;
+		padding: 16px;
+		background-color: white;
+		z-index: 999999999999999999;
+		box-shadow: 0px 0px 27px 0px #0E232624;
+        box-sizing: border-box;
+	}
+
+	.cookies-notification.in_process {
+		opacity: .8;
+	}
+
+	.gc-redesigned .cookies-notification {
+		width: calc(100% - 60px);
+	}
+
+	.cookies-notification__content {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.cookies-notification__actions__button {
+		padding: 0px 16px;
+		background: #0FF3AF;
+		border-radius: 24px;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 32px;
+		leading-trim: both;
+		text-edge: cap;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+		border: none;
+	}
+	.cookies-notification__actions__button:hover {
+		background:#18D297FF;
+	}
+
+	@media screen and (min-width: 769px) {
+		.cookies-notification,
+		.cookies-notification__content__link,
+		.cookies-notification__content__link:hover {
+			font-size: 16px;
+		}
+		.cookies-notification {
+			padding: 22px;
+			width: calc(100% - 60px);
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 50px;
+			max-width: 900px;
+			line-height: 146%;
+		}
+		.with-left-menu .cookies-notification,
+		.with_left_menu.cookies-notification {
+			width: calc(100% - 108px);
+			left: calc(50% + 36px);
+			transform: translateX(-50%);
+		}
+
+		.gc-redesigned .cookies-notification {
+			width: calc(100% - 144px);
+		}
+	}
+
+	.cookies-notification__actions__button {
+		cursor: pointer;
+	}
+</style>
+	<script src="https://usmanovafit.gymteam.ru/nassets/js/superlite-block-abe5dddff141bb1b6762071a4f0ff3e8.js?v=1783000578"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/3c3a8ce1/js/replace.js?v=1765633900"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/d40f6009/js/localstore.js?v=1765633901"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/d40f6009/deps/js/bootstrap-core.min.js?v=1765633901"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/e6953c0c/js/modal.js?v=1765633900"></script>
+<script src="https://usmanovafit.gymteam.ru/nassets/9f614c7f/notice.js?v=1782116784"></script>
+    <script async src="https://usmanovafit.gymteam.ru/chtm/s/metric/clarity.js"></script>
+
+			<script src="https://usmanovafit.gymteam.ru/public/js/gccounter-new.js?1"></script>
+	<!-- <script async src="https://vhencapi13.gcfiles.net/st/stat.js?v=--><!--"></script>-->
+					
+<script src="local-copy-fixes.js"></script>
 </body>
-</html>
